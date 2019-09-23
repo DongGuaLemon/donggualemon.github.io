@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="HEXO快速建置與使用!">
+  <meta name="keywords" content="Programmer,FPGA,">
 
 
 
@@ -79,21 +79,18 @@
 
 
 
-<meta name="description" content="用HEXO的第一篇當然就是要寫HEXO如何使用，要不然會忘記(誤)如果有錯誤地方歡迎噴我(希望溫柔點)。  曾經懵懂的我是慢慢手刻部落格，但由於每次更新都很麻煩，所以改去Blogger現在覺得HEXO真香。">
-<meta name="keywords" content="HEXO快速建置與使用!">
+<meta name="description" content="code/work/life">
+<meta name="keywords" content="Programmer,FPGA">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HEXO快速建置與使用!">
-<meta property="og:url" content="https://donggualemon.github.io/2019/09/21/HEXO/index.html">
+<meta property="og:title" content="FPGA-DES篇(Xilinx-ZedBoard)">
+<meta property="og:url" content="https://donggualemon.github.io/2018/10/19/FPGA-DES/index.html">
 <meta property="og:site_name" content="我的紀錄">
-<meta property="og:description" content="用HEXO的第一篇當然就是要寫HEXO如何使用，要不然會忘記(誤)如果有錯誤地方歡迎噴我(希望溫柔點)。  曾經懵懂的我是慢慢手刻部落格，但由於每次更新都很麻煩，所以改去Blogger現在覺得HEXO真香。">
+<meta property="og:description" content="code/work/life">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:image" content="https://donggualemon.github.io/img/HEXO.jpeg">
-<meta property="og:image" content="https://donggualemon.github.io/img/hexomain.PNG">
-<meta property="og:updated_time" content="2019-09-21T16:05:01.503Z">
+<meta property="og:updated_time" content="2019-09-23T08:37:04.572Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HEXO快速建置與使用!">
-<meta name="twitter:description" content="用HEXO的第一篇當然就是要寫HEXO如何使用，要不然會忘記(誤)如果有錯誤地方歡迎噴我(希望溫柔點)。  曾經懵懂的我是慢慢手刻部落格，但由於每次更新都很麻煩，所以改去Blogger現在覺得HEXO真香。">
-<meta name="twitter:image" content="https://donggualemon.github.io/img/HEXO.jpeg">
+<meta name="twitter:title" content="FPGA-DES篇(Xilinx-ZedBoard)">
+<meta name="twitter:description" content="code/work/life">
 
 
 
@@ -123,14 +120,14 @@
 
 
 
-  <link rel="canonical" href="https://donggualemon.github.io/2019/09/21/HEXO/">
+  <link rel="canonical" href="https://donggualemon.github.io/2018/10/19/FPGA-DES/">
 
 
 <meta name="google-site-verification" content="yMOSOBJdgXlSZd-wK5hSrhhv2vVKV9lzmlHhfxySuh4">
 
 
 
-  <title>HEXO快速建置與使用! | 我的紀錄</title>
+  <title>FPGA-DES篇(Xilinx-ZedBoard) | 我的紀錄</title>
   
 
 
@@ -267,7 +264,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://donggualemon.github.io/2019/09/21/HEXO/">
+    <link itemprop="mainEntityOfPage" href="https://donggualemon.github.io/2018/10/19/FPGA-DES/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wei">
@@ -284,7 +281,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">HEXO快速建置與使用!</h1>
+          <h1 class="post-title" itemprop="name headline">FPGA-DES篇(Xilinx-ZedBoard)</h1>
         
 
         <div class="post-meta">
@@ -296,8 +293,8 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2019-09-21T21:17:00+08:00">
-                2019-09-21
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-10-19T00:00:00+08:00">
+                2018-10-19
               </time>
             
 
@@ -321,6 +318,17 @@
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Programmer/" itemprop="url" rel="index">
                     <span itemprop="name">Programmer</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programmer/舊文章搬遷/" itemprop="url" rel="index">
+                    <span itemprop="name">舊文章搬遷</span>
                   </a>
                 </span>
 
@@ -356,60 +364,7 @@
       
 
       
-        <p><img src="/img/HEXO.jpeg" alt><br><font size="5">用HEXO的第一篇當然就是要寫HEXO如何使用，要不然會忘記(誤)如果有錯誤地方歡迎噴我(希望溫柔點)。</font></p>
-<blockquote>
-<p>曾經懵懂的我是慢慢手刻部落格，但由於每次更新都很麻煩，所以改去Blogger現在覺得HEXO真香。</p>
-</blockquote>
-<a id="more"></a>
-<p>廢話不多說馬上來快速建置吧!!!!!!!!!</p>
-<h1 id="開始安裝套件"><a href="#開始安裝套件" class="headerlink" title="開始安裝套件"></a>開始安裝套件</h1><p>&ensp;&ensp;先安裝Node.js~<a href="https://nodejs.org/en/" title="link" target="_blank" rel="noopener">請走這裡</a>，這個就大家自己安裝吧。<br>安裝HEXO:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-
-<p>接著創立自己想要的專案名稱:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init &apos;your project name&apos;</span><br></pre></td></tr></table></figure>
-
-<p>切換到你的專安名稱，開始下載所需套建項目。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> <span class="string">'your project name'</span></span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
-<p>過來就能先打開來試試看能不能用啦~~</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
-<p>沒有意外的話能看到以下的畫面。<br><img src="/img/hexomain.PNG" alt><br>假如有看到代表你成功了!!看吧HEXO真香。</p>
-<h1 id="開始寫網誌囉"><a href="#開始寫網誌囉" class="headerlink" title="開始寫網誌囉!"></a>開始寫網誌囉!</h1><p>new出一篇新文章or新頁面(可以搭配自己主題新增):</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new &apos;your name&apos; //新文章</span><br><span class="line">hexo new page &apos;page name&apos; //新頁面</span><br></pre></td></tr></table></figure>
-
-<p>這邊文章會產出在_posts為公開頁面，可以透過指令來產生或更改詳細可以看<a href="https://hexo.io/zh-tw/docs/commands.html" title="link" target="_blank" rel="noopener">文件這裡</a>。<br>HEXO是採用Markdown(.md)格式，如果大家不熟的話可以按<a href="https://markdown.tw/" title="link" target="_blank" rel="noopener">這裡</a>。<br>寫完的文章要佈署前，需讓他生成靜態檔:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>因你的網站為靜態網站所以都需生成靜態文件。</p>
-</blockquote>
-<p>發佈到git-page上:<br>需先在你的github上創建yourname.github.io的project。<br>並在你的<code>_config.yml</code>上做發布設定(_config為設定檔能在你的網站上做各種設定)。</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/_config.yml</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/your-github-username/your-github-username.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
-
-<p>接著發布上去就能有自己的靜態部落格啦:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>通常會遇到錯誤說deploy type沒有git是因為沒有安裝hexo-deployer-git插件:</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<p>這就能解決無插件問題。</p>
-<p>快速發布與生成指令:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
-
-<h1 id="哎呀好像有點不漂亮"><a href="#哎呀好像有點不漂亮" class="headerlink" title="哎呀好像有點不漂亮"></a>哎呀好像有點不漂亮</h1><p>&ensp;&ensp;看著自己的頁面有點不討喜，好像還是用其他blogger比較能換漂亮點的，停!HEXO也是可以換主題的哦，就連自己做也行~~可以到<a href="https://hexo.io/themes/" title="link" target="_blank" rel="noopener">這裡</a>去參觀很多主題。<br>選好喜歡的主題clone下來(我用比較完整受歡迎主題NEXT為範例):</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next.git ./themes/next</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>p.s.有些主題需要載入其他元件或更改設定請大家注意!<br>接著去修改<code>_config.yml</code>更換主題:</p>
-</blockquote>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/_config.yml</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
-
-<p>可以更改主題裡的設定(每個主題設定都不一樣)，就要到<code>themes/yourthemes/_config.yml</code>去做設置。</p>
-<h1 id="結尾"><a href="#結尾" class="headerlink" title="結尾"></a>結尾</h1><p>其實還有很多東西能操作，例如:第三方外掛、設定檔配置……很多很多，代表HEXO的強大所以大家可以試試看哦!<br>有問題歡迎提問與私訊。<br>之前未改成HEXO時文章處Blogger:<a href="https://aawogo.blogspot.com/" target="_blank" rel="noopener">https://aawogo.blogspot.com/</a></p>
-
+        
       
     </div>
     
@@ -428,6 +383,8 @@
           
             <a href="/tags/Programmer/" rel="tag"># Programmer</a>
           
+            <a href="/tags/FPGA/" rel="tag"># FPGA</a>
+          
         </div>
       
 
@@ -439,8 +396,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/09/20/test/" rel="next" title="測試與建置">
-                <i class="fa fa-chevron-left"></i> 測試與建置
+              <a href="/2018/10/18/FPGA-AES/" rel="next" title="FPGA-AES篇(Xilinx-ZedBoard)">
+                <i class="fa fa-chevron-left"></i> FPGA-AES篇(Xilinx-ZedBoard)
               </a>
             
           </div>
@@ -448,6 +405,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/09/20/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -499,17 +460,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目錄
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            本站概覽
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -585,22 +537,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#開始安裝套件"><span class="nav-number">1.</span> <span class="nav-text">開始安裝套件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#開始寫網誌囉"><span class="nav-number">2.</span> <span class="nav-text">開始寫網誌囉!</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#哎呀好像有點不漂亮"><span class="nav-number">3.</span> <span class="nav-text">哎呀好像有點不漂亮</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#結尾"><span class="nav-number">4.</span> <span class="nav-text">結尾</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
