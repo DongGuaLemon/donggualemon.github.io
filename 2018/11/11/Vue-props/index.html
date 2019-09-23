@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Programmer,FPGA,">
+  <meta name="keywords" content="Programmer,Vue,">
 
 
 
@@ -79,33 +79,20 @@
 
 
 
-<meta name="description" content="因為IOT的多項論文提到，IOT的資訊加密的重要性，所以要在電路裡增加加解密，打算要四個加解密方式RSA、AES、DES、3DES，之後擴展為使用PR(Reconfigurable Partitioning)部分可重組技術，可在不斷電情況下將原先的電路進行重新燒錄，並且不引響其他元件的運作，保有硬體原先效能，能夠重複改寫，是個好厲害的技術。傳統嵌入式必須一次性全部掛在電路(之後來做個比較)。">
-<meta name="keywords" content="Programmer,FPGA">
+<meta name="description" content="之前因為寫專案的原因，沒有按部就班地好好學習，所以直接學了Vuex來傳遞與溝通，不過之後補了props、emit之後在一些小地方的父子組件溝通更方便的體會到。">
+<meta name="keywords" content="Programmer,Vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="FPGA-RSA篇(Xilinx-ZedBoard)">
-<meta property="og:url" content="https://donggualemon.github.io/2018/10/17/FPGA-RSA/index.html">
+<meta property="og:title" content="Vue-props">
+<meta property="og:url" content="https://donggualemon.github.io/2018/11/11/Vue-props/index.html">
 <meta property="og:site_name" content="我的紀錄">
-<meta property="og:description" content="因為IOT的多項論文提到，IOT的資訊加密的重要性，所以要在電路裡增加加解密，打算要四個加解密方式RSA、AES、DES、3DES，之後擴展為使用PR(Reconfigurable Partitioning)部分可重組技術，可在不斷電情況下將原先的電路進行重新燒錄，並且不引響其他元件的運作，保有硬體原先效能，能夠重複改寫，是個好厲害的技術。傳統嵌入式必須一次性全部掛在電路(之後來做個比較)。">
+<meta property="og:description" content="之前因為寫專案的原因，沒有按部就班地好好學習，所以直接學了Vuex來傳遞與溝通，不過之後補了props、emit之後在一些小地方的父子組件溝通更方便的體會到。">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:image" content="https://donggualemon.github.io/img/zedboard-.jpg">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/RSA.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/vivado.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa1.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa2.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa3.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa4.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa5.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa6.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa7.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa8.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/RSA-1.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/standalone.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/putty.JPG">
-<meta property="og:updated_time" content="2019-09-22T08:43:48.547Z">
+<meta property="og:image" content="https://donggualemon.github.io/img/props.PNG">
+<meta property="og:updated_time" content="2019-09-23T13:50:02.690Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="FPGA-RSA篇(Xilinx-ZedBoard)">
-<meta name="twitter:description" content="因為IOT的多項論文提到，IOT的資訊加密的重要性，所以要在電路裡增加加解密，打算要四個加解密方式RSA、AES、DES、3DES，之後擴展為使用PR(Reconfigurable Partitioning)部分可重組技術，可在不斷電情況下將原先的電路進行重新燒錄，並且不引響其他元件的運作，保有硬體原先效能，能夠重複改寫，是個好厲害的技術。傳統嵌入式必須一次性全部掛在電路(之後來做個比較)。">
-<meta name="twitter:image" content="https://donggualemon.github.io/img/zedboard-.jpg">
+<meta name="twitter:title" content="Vue-props">
+<meta name="twitter:description" content="之前因為寫專案的原因，沒有按部就班地好好學習，所以直接學了Vuex來傳遞與溝通，不過之後補了props、emit之後在一些小地方的父子組件溝通更方便的體會到。">
+<meta name="twitter:image" content="https://donggualemon.github.io/img/props.PNG">
 
 
 
@@ -135,14 +122,14 @@
 
 
 
-  <link rel="canonical" href="https://donggualemon.github.io/2018/10/17/FPGA-RSA/">
+  <link rel="canonical" href="https://donggualemon.github.io/2018/11/11/Vue-props/">
 
 
 <meta name="google-site-verification" content="yMOSOBJdgXlSZd-wK5hSrhhv2vVKV9lzmlHhfxySuh4">
 
 
 
-  <title>FPGA-RSA篇(Xilinx-ZedBoard) | 我的紀錄</title>
+  <title>Vue-props | 我的紀錄</title>
   
 
 
@@ -279,7 +266,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://donggualemon.github.io/2018/10/17/FPGA-RSA/">
+    <link itemprop="mainEntityOfPage" href="https://donggualemon.github.io/2018/11/11/Vue-props/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wei">
@@ -296,7 +283,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">FPGA-RSA篇(Xilinx-ZedBoard)</h1>
+          <h1 class="post-title" itemprop="name headline">Vue-props</h1>
         
 
         <div class="post-meta">
@@ -308,8 +295,8 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-10-17T00:00:00+08:00">
-                2018-10-17
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-11-11T00:00:00+08:00">
+                2018-11-11
               </time>
             
 
@@ -379,13 +366,32 @@
       
 
       
-        <p><img src="/img/zedboard-.jpg" alt><br>因為IOT的多項論文提到，IOT的資訊加密的重要性，所以要在電路裡增加<strong>加解密</strong>，打算要四個加解密方式<code>RSA、AES、DES、3DES</code>，之後擴展為使用<code>PR(Reconfigurable Partitioning)</code>部分可重組技術，可在不斷電情況下將原先的電路進行重新燒錄，並且不引響其他元件的運作，保有硬體原先效能，能夠重複改寫，是個好厲害的技術。傳統嵌入式必須一次性全部掛在電路(之後來做個比較)。</p>
+        <p><img src="/img/props.PNG" alt><br>之前因為寫專案的原因，沒有按部就班地好好學習，所以直接學了Vuex來傳遞與溝通，不過之後補了props、emit之後在一些小地方的父子組件溝通更方便的體會到。</p>
 <a id="more"></a>
+<p>由上面的圖片看來，一個溝通模式父元件透過<code>props</code>的方式向子元件傳送數值，而子元件要呼叫父元件是透過<code>emit</code>的方式傳送事件(events)。</p>
+<h1 id="父對子-Props"><a href="#父對子-Props" class="headerlink" title="父對子(Props)"></a>父對子(Props)</h1><p>因各元件為獨立狀態，無法隨意的溝通或共享數據，並且有兄弟元件、父子元件的關係，而父元件要傳送數值給自己的子元件就是使用<code>props</code>屬性。<br>範例:<br>父組件程式碼</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;child :text=<span class="string">"text1"</span> message=<span class="string">'I am a child.'</span> &gt;<span class="xml"><span class="tag">&lt;/<span class="name">child</span>&gt;</span></span> </span><br><span class="line">&lt;<span class="regexp">/template&gt;</span></span><br><span class="line"><span class="regexp"> </span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp"> </span></span><br><span class="line"><span class="regexp">import child from './</span>child.vue<span class="string">';</span></span><br><span class="line"><span class="string"> </span></span><br><span class="line"><span class="string">export default &#123;</span></span><br><span class="line"><span class="string">    components: &#123;</span></span><br><span class="line"><span class="string">        child</span></span><br><span class="line"><span class="string">    &#125;,</span></span><br><span class="line"><span class="string">    data () &#123;</span></span><br><span class="line"><span class="string">        return &#123;</span></span><br><span class="line"><span class="string">            text1: '</span>father props<span class="string">';</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&lt;script&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="執行環境與配置"><a href="#執行環境與配置" class="headerlink" title="執行環境與配置"></a>執行環境與配置</h1><p>測試軟體與建置軟體:<strong>Xilinx Vivado2016.4(之後升級為2017) Vivado-SDK</strong><br>硬體:<strong>Xilinx-Zynq 7000 ZedBoard</strong><br>板子環境(這裡只講到Standalone，要不然還要講到kernel driver。):<strong>Xilinx linux3.14(這並不是完整linux環境哦!)</strong></p>
-<h1 id="開始製作IP吧"><a href="#開始製作IP吧" class="headerlink" title="開始製作IP吧!"></a>開始製作IP吧!</h1><p>IP為172.168…..(誤!不是這個IP)，這裡使用<code>VHDL</code>編寫RSA32的程式碼。<br><strong>RSA  Port部分程式碼檔案:</strong><br><img src="/img/RSA/RSA.JPG" alt><br>有了整個的RSA的程式碼，就來把它變成IP吧!<br>打開vivado 2016併選擇<code>manage ip</code>然後新增IP (檔名我們就取個RSA吧):<br><img src="/img/RSA/vivado.JPG" alt><br>建立完成(附註請選擇創造<code>AXI IP</code> 然後透過VHDL我們可以知道需要<code>7</code>個暫存器 <code>clk</code>有系統內建)<br><img src="/img/RSA/rsa1.JPG" alt><br>接著把RSA的相關程式碼用<code>add source</code>加進去，加進去了就開始撰寫IP得配置和暫存器劃分。<br>告訴上層的<code>AXI_inst</code>有什麼配置然後所需的位元大小等等……我將2個OUTPUT設2個訊號接點(signal)<br><img src="/img/RSA/rsa2.JPG" alt><br>然後來分配暫存器囉，還有加上自己的訊號接點，還有<code>user logic</code>並結合上圖的配置。<br><img src="/img/RSA/rsa3.JPG" alt><br><img src="/img/RSA/rsa4.JPG" alt><br>結束存檔會發現一開始匯入的source檔和我們的接線殼合併了(代表吻合囉)!!<br><img src="/img/RSA/rsa5.JPG" alt><br>過來就是跑合成<code>run synthesis</code>看看有沒有問題，沒問題之後就能來打包IP<code>package ip</code>惹YA(記得<code>merge</code>)<br><img src="/img/RSA/rsa6.JPG" alt><br>這就完成IP的生成了。</p>
-<h1 id="開始匯入IP與設置電路"><a href="#開始匯入IP與設置電路" class="headerlink" title="開始匯入IP與設置電路"></a>開始匯入IP與設置電路</h1><p>新建一個檔案並選擇我們的<code>Zedboard(xc7z020clg484-1)</code>板子，然後匯入我們的做好的IP，新增一個<code>block design</code>然後把他丟進去加上主控(PS)。<br><img src="/img/RSA/rsa7.JPG" alt><br>建好之後就來<code>Generate Output Products</code>(生成HDL源文檔和相應端口的約束檔) 和 <code>Create HDL wrapper</code>(生成整個工程的文檔)吧!<br><img src="/img/RSA/rsa8.JPG" alt><br>開始<code>Run Synthesis -&gt; Run Implemented -&gt; Generate Bitstream -&gt; export Hardware -&gt; launch sdk</code> 轉戰SDK。</p>
-<h1 id="SDK做測試"><a href="#SDK做測試" class="headerlink" title="SDK做測試"></a>SDK做測試</h1><p>SDK左上角應該就會跑出你剛剛做完的底層(假如沒有在自己匯入檔案吧)<br><img src="/img/RSA/RSA-1.JPG" alt><br>這裡單純只是做<code>Standalone</code>測試ip是否真的能跑起來，所以新增一個hello word project，並改寫裡面的程式碼。<br>並透過testbench和程式碼判斷哪個暫存器要給什麼值。下面是測資<br><img src="/img/RSA/standalone.JPG" alt><br>寫完就來測試看看吧!拿出我們貴貴的板子，然後請調板子的jump讓他知道只是下板子不是跑SD卡哦!打開後燒錄我們的底層資訊吧，然後打開putty連進去看狀態並run一下剛剛寫的測試資料。<br><img src="/img/RSA/putty.JPG" alt><br>成功之後就是這樣，很多地方都是提到而已並沒有詳細講下去，有興趣的朋友歡迎討論與指教。</p>
+<p>子組件程式碼</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">   &lt;div&gt;&#123;&#123;text&#125;&#125;&#123;&#123;message&#125;&#125;&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>template&gt;</span><br><span class="line"> </span><br><span class="line">&lt;script&gt;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    props: &#123;</span><br><span class="line">        text:<span class="string">""</span>,</span><br><span class="line">        message:<span class="string">""</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>這樣就能把數值、資料傳到父組件，我們來整理一下<code>props</code>功能吧!</p>
+<ul>
+<li>為元件中自訂屬性。</li>
+<li>傳送數值可用陣列、物件、字串 等等。</li>
+<li>透過父元件傳送給子元件。<blockquote>
+<p>警告:千萬不能直接改<code>props</code>傳送過來的數值，想要直接更改父元件，這作法是不正確的。</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="子對父-Emit"><a href="#子對父-Emit" class="headerlink" title="子對父(Emit)"></a>子對父(Emit)</h1><p>父對子是用<code>Props</code>，而子要調用父則是使用<code>$emit</code>，來觸發事件的。<br>而在Vue當中綁定事件是用<code>v-on(@)</code>，而要怎麼使用呢?<br>範例:<br>父組件程式碼</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;child @childpass=<span class="string">"func"</span> &gt;<span class="xml"><span class="tag">&lt;/<span class="name">child</span>&gt;</span></span> </span><br><span class="line">&lt;<span class="regexp">/template&gt;</span></span><br><span class="line"><span class="regexp"> </span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp"> </span></span><br><span class="line"><span class="regexp">import child from './</span>child.vue<span class="string">';</span></span><br><span class="line"><span class="string"> </span></span><br><span class="line"><span class="string">export default &#123;</span></span><br><span class="line"><span class="string">    components: &#123;</span></span><br><span class="line"><span class="string">        child</span></span><br><span class="line"><span class="string">    &#125;,</span></span><br><span class="line"><span class="string">    methods:&#123;</span></span><br><span class="line"><span class="string">      func()&#123;</span></span><br><span class="line"><span class="string">        //假如有傳送值，記得塞入function.</span></span><br><span class="line"><span class="string">        console.log("hello,this is father")</span></span><br><span class="line"><span class="string">      &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&lt;script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>子組件程式碼</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">   &lt;button @click=<span class="string">"emitevents"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">&lt;<span class="regexp">/template&gt;</span></span><br><span class="line"><span class="regexp"> </span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp">  </span></span><br><span class="line"><span class="regexp">export default &#123;</span></span><br><span class="line"><span class="regexp">    methods:&#123;</span></span><br><span class="line"><span class="regexp">      emitevents()&#123;</span></span><br><span class="line"><span class="regexp">        console.log("hello,this is child")</span></span><br><span class="line"><span class="regexp">        this.$emit('childpass')/</span><span class="regexp">/呼叫事件</span></span><br><span class="line"><span class="regexp">        this.$emit('childpass',value)/</span><span class="regexp">/假如有數值等等</span></span><br><span class="line"><span class="regexp">      &#125;</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp">&lt;/</span>script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>這個就是簡單的emit操作，而emit還可以傳送在兄弟元件之中，需要搭配$on來監聽事件，$emit來觸發事件，有興趣的各位可以去官方文件看看。</p>
+<p>其實還有很多元件操作上的方式，這裡主要講比較常用和看到的，在於比較小的專案或單純父子元件是非常好用的，但若是出現祖父、曾祖父元件，可能就要考慮是否引入Vuex囉!</p>
 
       
     </div>
@@ -405,7 +411,7 @@
           
             <a href="/tags/Programmer/" rel="tag"># Programmer</a>
           
-            <a href="/tags/FPGA/" rel="tag"># FPGA</a>
+            <a href="/tags/Vue/" rel="tag"># Vue</a>
           
         </div>
       
@@ -418,14 +424,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/10/27/Vue-CLI-update/" rel="next" title="Vue-CLI 2=>3升級">
+                <i class="fa fa-chevron-left"></i> Vue-CLI 2=>3升級
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/10/18/FPGA-AES/" rel="prev" title="FPGA-AES篇(Xilinx-ZedBoard)">
-                FPGA-AES篇(Xilinx-ZedBoard) <i class="fa fa-chevron-right"></i>
+              <a href="/2018/11/25/Vue-todolist/" rel="prev" title="Vue-todolist小實做">
+                Vue-todolist小實做 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -574,7 +584,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#執行環境與配置"><span class="nav-number">1.</span> <span class="nav-text">執行環境與配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#開始製作IP吧"><span class="nav-number">2.</span> <span class="nav-text">開始製作IP吧!</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#開始匯入IP與設置電路"><span class="nav-number">3.</span> <span class="nav-text">開始匯入IP與設置電路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SDK做測試"><span class="nav-number">4.</span> <span class="nav-text">SDK做測試</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#父對子-Props"><span class="nav-number">1.</span> <span class="nav-text">父對子(Props)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#子對父-Emit"><span class="nav-number">2.</span> <span class="nav-text">子對父(Emit)</span></a></li></ol></div>
             
 
           </div>

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Programmer,FPGA,">
+  <meta name="keywords" content="Programmer,Vue,">
 
 
 
@@ -79,33 +79,26 @@
 
 
 
-<meta name="description" content="因為IOT的多項論文提到，IOT的資訊加密的重要性，所以要在電路裡增加加解密，打算要四個加解密方式RSA、AES、DES、3DES，之後擴展為使用PR(Reconfigurable Partitioning)部分可重組技術，可在不斷電情況下將原先的電路進行重新燒錄，並且不引響其他元件的運作，保有硬體原先效能，能夠重複改寫，是個好厲害的技術。傳統嵌入式必須一次性全部掛在電路(之後來做個比較)。">
-<meta name="keywords" content="Programmer,FPGA">
+<meta name="description" content="之前是從Vue-CLI 2開始接觸網頁前端的，最近不久Vue-CLI 3推出之後一直考慮是否要升級，希望能無痛轉移哈哈，考慮了一陣子還是該踩踩坑啦!!順便剛好手邊有機會來著手碰碰Vue-CLI 3直接支援的PWA。">
+<meta name="keywords" content="Programmer,Vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="FPGA-RSA篇(Xilinx-ZedBoard)">
-<meta property="og:url" content="https://donggualemon.github.io/2018/10/17/FPGA-RSA/index.html">
+<meta property="og:title" content="Vue-CLI 2=&gt;3升級">
+<meta property="og:url" content="https://donggualemon.github.io/2018/10/27/Vue-CLI-update/index.html">
 <meta property="og:site_name" content="我的紀錄">
-<meta property="og:description" content="因為IOT的多項論文提到，IOT的資訊加密的重要性，所以要在電路裡增加加解密，打算要四個加解密方式RSA、AES、DES、3DES，之後擴展為使用PR(Reconfigurable Partitioning)部分可重組技術，可在不斷電情況下將原先的電路進行重新燒錄，並且不引響其他元件的運作，保有硬體原先效能，能夠重複改寫，是個好厲害的技術。傳統嵌入式必須一次性全部掛在電路(之後來做個比較)。">
+<meta property="og:description" content="之前是從Vue-CLI 2開始接觸網頁前端的，最近不久Vue-CLI 3推出之後一直考慮是否要升級，希望能無痛轉移哈哈，考慮了一陣子還是該踩踩坑啦!!順便剛好手邊有機會來著手碰碰Vue-CLI 3直接支援的PWA。">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:image" content="https://donggualemon.github.io/img/zedboard-.jpg">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/RSA.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/vivado.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa1.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa2.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa3.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa4.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa5.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa6.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa7.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa8.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/RSA-1.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/standalone.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/putty.JPG">
-<meta property="og:updated_time" content="2019-09-22T08:43:48.547Z">
+<meta property="og:image" content="https://donggualemon.github.io/img/Vue-CLI/cli-logo.png">
+<meta property="og:image" content="https://donggualemon.github.io/img/Vue-CLI/1.PNG">
+<meta property="og:image" content="https://donggualemon.github.io/img/Vue-CLI/2.PNG">
+<meta property="og:image" content="https://donggualemon.github.io/img/Vue-CLI/3.PNG">
+<meta property="og:image" content="https://donggualemon.github.io/img/Vue-CLI/4.PNG">
+<meta property="og:image" content="https://donggualemon.github.io/img/Vue-CLI/5.PNG">
+<meta property="og:image" content="https://donggualemon.github.io/img/Vue-CLI/6.PNG">
+<meta property="og:updated_time" content="2019-09-23T13:50:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="FPGA-RSA篇(Xilinx-ZedBoard)">
-<meta name="twitter:description" content="因為IOT的多項論文提到，IOT的資訊加密的重要性，所以要在電路裡增加加解密，打算要四個加解密方式RSA、AES、DES、3DES，之後擴展為使用PR(Reconfigurable Partitioning)部分可重組技術，可在不斷電情況下將原先的電路進行重新燒錄，並且不引響其他元件的運作，保有硬體原先效能，能夠重複改寫，是個好厲害的技術。傳統嵌入式必須一次性全部掛在電路(之後來做個比較)。">
-<meta name="twitter:image" content="https://donggualemon.github.io/img/zedboard-.jpg">
+<meta name="twitter:title" content="Vue-CLI 2=&gt;3升級">
+<meta name="twitter:description" content="之前是從Vue-CLI 2開始接觸網頁前端的，最近不久Vue-CLI 3推出之後一直考慮是否要升級，希望能無痛轉移哈哈，考慮了一陣子還是該踩踩坑啦!!順便剛好手邊有機會來著手碰碰Vue-CLI 3直接支援的PWA。">
+<meta name="twitter:image" content="https://donggualemon.github.io/img/Vue-CLI/cli-logo.png">
 
 
 
@@ -135,14 +128,14 @@
 
 
 
-  <link rel="canonical" href="https://donggualemon.github.io/2018/10/17/FPGA-RSA/">
+  <link rel="canonical" href="https://donggualemon.github.io/2018/10/27/Vue-CLI-update/">
 
 
 <meta name="google-site-verification" content="yMOSOBJdgXlSZd-wK5hSrhhv2vVKV9lzmlHhfxySuh4">
 
 
 
-  <title>FPGA-RSA篇(Xilinx-ZedBoard) | 我的紀錄</title>
+  <title>Vue-CLI 2=>3升級 | 我的紀錄</title>
   
 
 
@@ -279,7 +272,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://donggualemon.github.io/2018/10/17/FPGA-RSA/">
+    <link itemprop="mainEntityOfPage" href="https://donggualemon.github.io/2018/10/27/Vue-CLI-update/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wei">
@@ -296,7 +289,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">FPGA-RSA篇(Xilinx-ZedBoard)</h1>
+          <h1 class="post-title" itemprop="name headline">Vue-CLI 2=>3升級</h1>
         
 
         <div class="post-meta">
@@ -308,8 +301,8 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-10-17T00:00:00+08:00">
-                2018-10-17
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-10-27T00:00:00+08:00">
+                2018-10-27
               </time>
             
 
@@ -379,13 +372,36 @@
       
 
       
-        <p><img src="/img/zedboard-.jpg" alt><br>因為IOT的多項論文提到，IOT的資訊加密的重要性，所以要在電路裡增加<strong>加解密</strong>，打算要四個加解密方式<code>RSA、AES、DES、3DES</code>，之後擴展為使用<code>PR(Reconfigurable Partitioning)</code>部分可重組技術，可在不斷電情況下將原先的電路進行重新燒錄，並且不引響其他元件的運作，保有硬體原先效能，能夠重複改寫，是個好厲害的技術。傳統嵌入式必須一次性全部掛在電路(之後來做個比較)。</p>
+        <p><img src="/img/Vue-CLI/cli-logo.png" alt><br>之前是從Vue-CLI 2開始接觸網頁前端的，最近不久Vue-CLI 3推出之後一直考慮是否要升級，希望能無痛轉移哈哈，考慮了一陣子還是該踩踩坑啦!!順便剛好手邊有機會來著手碰碰Vue-CLI 3直接支援的PWA。</p>
 <a id="more"></a>
+<h1 id="開始安裝"><a href="#開始安裝" class="headerlink" title="開始安裝"></a>開始安裝</h1><p>Vue CLI v3 要求 Node.js V8 或更高版本(建議版本 8.10.0+ )。<br>能使用npm或yarn進行安裝，我自己是用npm。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br><span class="line">or</span><br><span class="line">yarn global add @vue/cli</span><br></pre></td></tr></table></figure>
 
-<h1 id="執行環境與配置"><a href="#執行環境與配置" class="headerlink" title="執行環境與配置"></a>執行環境與配置</h1><p>測試軟體與建置軟體:<strong>Xilinx Vivado2016.4(之後升級為2017) Vivado-SDK</strong><br>硬體:<strong>Xilinx-Zynq 7000 ZedBoard</strong><br>板子環境(這裡只講到Standalone，要不然還要講到kernel driver。):<strong>Xilinx linux3.14(這並不是完整linux環境哦!)</strong></p>
-<h1 id="開始製作IP吧"><a href="#開始製作IP吧" class="headerlink" title="開始製作IP吧!"></a>開始製作IP吧!</h1><p>IP為172.168…..(誤!不是這個IP)，這裡使用<code>VHDL</code>編寫RSA32的程式碼。<br><strong>RSA  Port部分程式碼檔案:</strong><br><img src="/img/RSA/RSA.JPG" alt><br>有了整個的RSA的程式碼，就來把它變成IP吧!<br>打開vivado 2016併選擇<code>manage ip</code>然後新增IP (檔名我們就取個RSA吧):<br><img src="/img/RSA/vivado.JPG" alt><br>建立完成(附註請選擇創造<code>AXI IP</code> 然後透過VHDL我們可以知道需要<code>7</code>個暫存器 <code>clk</code>有系統內建)<br><img src="/img/RSA/rsa1.JPG" alt><br>接著把RSA的相關程式碼用<code>add source</code>加進去，加進去了就開始撰寫IP得配置和暫存器劃分。<br>告訴上層的<code>AXI_inst</code>有什麼配置然後所需的位元大小等等……我將2個OUTPUT設2個訊號接點(signal)<br><img src="/img/RSA/rsa2.JPG" alt><br>然後來分配暫存器囉，還有加上自己的訊號接點，還有<code>user logic</code>並結合上圖的配置。<br><img src="/img/RSA/rsa3.JPG" alt><br><img src="/img/RSA/rsa4.JPG" alt><br>結束存檔會發現一開始匯入的source檔和我們的接線殼合併了(代表吻合囉)!!<br><img src="/img/RSA/rsa5.JPG" alt><br>過來就是跑合成<code>run synthesis</code>看看有沒有問題，沒問題之後就能來打包IP<code>package ip</code>惹YA(記得<code>merge</code>)<br><img src="/img/RSA/rsa6.JPG" alt><br>這就完成IP的生成了。</p>
-<h1 id="開始匯入IP與設置電路"><a href="#開始匯入IP與設置電路" class="headerlink" title="開始匯入IP與設置電路"></a>開始匯入IP與設置電路</h1><p>新建一個檔案並選擇我們的<code>Zedboard(xc7z020clg484-1)</code>板子，然後匯入我們的做好的IP，新增一個<code>block design</code>然後把他丟進去加上主控(PS)。<br><img src="/img/RSA/rsa7.JPG" alt><br>建好之後就來<code>Generate Output Products</code>(生成HDL源文檔和相應端口的約束檔) 和 <code>Create HDL wrapper</code>(生成整個工程的文檔)吧!<br><img src="/img/RSA/rsa8.JPG" alt><br>開始<code>Run Synthesis -&gt; Run Implemented -&gt; Generate Bitstream -&gt; export Hardware -&gt; launch sdk</code> 轉戰SDK。</p>
-<h1 id="SDK做測試"><a href="#SDK做測試" class="headerlink" title="SDK做測試"></a>SDK做測試</h1><p>SDK左上角應該就會跑出你剛剛做完的底層(假如沒有在自己匯入檔案吧)<br><img src="/img/RSA/RSA-1.JPG" alt><br>這裡單純只是做<code>Standalone</code>測試ip是否真的能跑起來，所以新增一個hello word project，並改寫裡面的程式碼。<br>並透過testbench和程式碼判斷哪個暫存器要給什麼值。下面是測資<br><img src="/img/RSA/standalone.JPG" alt><br>寫完就來測試看看吧!拿出我們貴貴的板子，然後請調板子的jump讓他知道只是下板子不是跑SD卡哦!打開後燒錄我們的底層資訊吧，然後打開putty連進去看狀態並run一下剛剛寫的測試資料。<br><img src="/img/RSA/putty.JPG" alt><br>成功之後就是這樣，很多地方都是提到而已並沒有詳細講下去，有興趣的朋友歡迎討論與指教。</p>
+<p>安裝完後可透過</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue -V</span><br></pre></td></tr></table></figure>
+
+<p>來確認版本是否為3.0</p>
+<h1 id="建立新專案"><a href="#建立新專案" class="headerlink" title="建立新專案"></a>建立新專案</h1><p>以前是透過</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue init my-project</span><br></pre></td></tr></table></figure>
+
+<p>來建置新專案，而Vue CLI 3則改成使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue create my-project</span><br></pre></td></tr></table></figure>
+
+<p>來代替原本舊的寫法。</p>
+<p>接下來開始安裝畫面:詢問安裝套件(我選擇自選)<br><img src="/img/Vue-CLI/1.PNG" alt><br>然後開始選擇想要的套件(Vuex、Router、CSS預處理器等等……)<br><img src="/img/Vue-CLI/2.PNG" alt><br>詢問配置文件要獨立還是放package.json<br><img src="/img/Vue-CLI/3.PNG" alt><br>是否記住這些選項<br><img src="/img/Vue-CLI/4.PNG" alt><br>過來就等待安裝啦，並打開我們的專案。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> my-project</span><br><span class="line">npm run serve</span><br></pre></td></tr></table></figure>
+
+<p>不再是以前的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+
+<p>我們執行指令之後，Vue-CLI會啟動一個http服務，可以從localhost打開。<br><img src="/img/Vue-CLI/5.PNG" alt><br>而生成靜態資源檔指令和之前一樣(生成在dist資料夾)。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure>
+
+<p><img src="/img/Vue-CLI/6.PNG" alt></p>
+<h1 id="Vue-config-js設定"><a href="#Vue-config-js設定" class="headerlink" title="Vue.config.js設定"></a>Vue.config.js設定</h1><p>會發現以前的webpack.config.js不見了!!沒錯被隱藏起來了，假如有要改配置的話要手動新增，vue.config.js放在根目錄中(假如沒有要改就不用手動就用預設)。<br>相關配置請查詢官方設定<a href="https://cli.vuejs.org/guide/webpack.html#replacing-loaders-of-a-rule" title="link" target="_blank" rel="noopener">請按這裡</a>。(底下為示範)</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">module.exports</span> <span class="string">=</span> <span class="string">&#123;</span></span><br><span class="line"><span class="attr">baseUrl:</span> <span class="string">'/'</span><span class="string">,</span></span><br><span class="line"><span class="attr">outputDir:</span> <span class="string">'dist'</span><span class="string">,</span></span><br><span class="line"><span class="attr">compiler:</span> <span class="literal">false</span><span class="string">,</span></span><br><span class="line"><span class="attr">chainWebpack:</span> <span class="string">()</span> <span class="string">=&gt;</span> <span class="string">&#123;&#125;,</span></span><br><span class="line"><span class="attr">configureWebpack:</span> <span class="string">()</span> <span class="string">=&gt;</span> <span class="string">&#123;&#125;,</span></span><br><span class="line"><span class="attr">vueLoader:</span> <span class="string">&#123;&#125;,</span></span><br><span class="line"><span class="attr">devServer:</span> <span class="string">&#123;</span></span><br><span class="line"><span class="attr">    open:</span> <span class="string">process.platform</span> <span class="string">===</span> <span class="string">'darwin'</span><span class="string">,</span></span><br><span class="line"><span class="attr">    host:</span> <span class="string">'0.0.0.0'</span><span class="string">,</span></span><br><span class="line"><span class="attr">    port:</span> <span class="number">8080</span><span class="string">,</span></span><br><span class="line"><span class="attr">    https:</span> <span class="literal">false</span><span class="string">,</span></span><br><span class="line"><span class="attr">    hotOnly:</span> <span class="literal">false</span><span class="string">,</span></span><br><span class="line"><span class="attr">    proxy:</span> <span class="literal">null</span><span class="string">,</span> <span class="string">//</span> <span class="string">string</span> <span class="string">| Object</span></span><br><span class="line"><span class="string"></span><span class="attr">    before:</span> <span class="string">app</span> <span class="string">=&gt;</span> <span class="string">&#123;</span></span><br><span class="line">    <span class="string">&#125;</span></span><br><span class="line">  <span class="string">&#125;,</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>以上大概就是新版CLI3的建置過程，雖然還有很多東西，不過基本從這裡開始，剩下的大家一起努力挖掘吧!</p>
 
       
     </div>
@@ -405,7 +421,7 @@
           
             <a href="/tags/Programmer/" rel="tag"># Programmer</a>
           
-            <a href="/tags/FPGA/" rel="tag"># FPGA</a>
+            <a href="/tags/Vue/" rel="tag"># Vue</a>
           
         </div>
       
@@ -418,14 +434,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/10/19/FPGA-DES/" rel="next" title="FPGA-DES篇(Xilinx-ZedBoard)">
+                <i class="fa fa-chevron-left"></i> FPGA-DES篇(Xilinx-ZedBoard)
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/10/18/FPGA-AES/" rel="prev" title="FPGA-AES篇(Xilinx-ZedBoard)">
-                FPGA-AES篇(Xilinx-ZedBoard) <i class="fa fa-chevron-right"></i>
+              <a href="/2018/11/11/Vue-props/" rel="prev" title="Vue-props">
+                Vue-props <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -574,7 +594,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#執行環境與配置"><span class="nav-number">1.</span> <span class="nav-text">執行環境與配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#開始製作IP吧"><span class="nav-number">2.</span> <span class="nav-text">開始製作IP吧!</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#開始匯入IP與設置電路"><span class="nav-number">3.</span> <span class="nav-text">開始匯入IP與設置電路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SDK做測試"><span class="nav-number">4.</span> <span class="nav-text">SDK做測試</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#開始安裝"><span class="nav-number">1.</span> <span class="nav-text">開始安裝</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#建立新專案"><span class="nav-number">2.</span> <span class="nav-text">建立新專案</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue-config-js設定"><span class="nav-number">3.</span> <span class="nav-text">Vue.config.js設定</span></a></li></ol></div>
             
 
           </div>
