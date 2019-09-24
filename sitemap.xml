@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://donggualemon.github.io/2019/05/29/gitlab-ci/</loc>
+    
+    <lastmod>2019-09-24T09:48:24.850Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://donggualemon.github.io/2019/09/24/Phaser/</loc>
+    
+    <lastmod>2019-09-23T18:27:35.043Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://donggualemon.github.io/2019/03/14/Vue-eventbus/</loc>
+    
+    <lastmod>2019-09-23T18:26:31.908Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://donggualemon.github.io/2018/11/27/Vue-todolist2/</loc>
     
     <lastmod>2019-09-23T18:13:05.645Z</lastmod>
@@ -86,14 +107,14 @@
   </url>
   
   <url>
-    <loc>https://donggualemon.github.io/tags/index.html</loc>
+    <loc>https://donggualemon.github.io/categories/index.html</loc>
     
     <lastmod>2019-09-20T15:36:30.913Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://donggualemon.github.io/categories/index.html</loc>
+    <loc>https://donggualemon.github.io/tags/index.html</loc>
     
     <lastmod>2019-09-20T15:36:30.913Z</lastmod>
     

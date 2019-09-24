@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Programmer,FPGA,">
+  <meta name="keywords" content="Programmer,Vue,">
 
 
 
@@ -79,33 +79,20 @@
 
 
 
-<meta name="description" content="因為IOT的多項論文提到，IOT的資訊加密的重要性，所以要在電路裡增加加解密，打算要四個加解密方式RSA、AES、DES、3DES，之後擴展為使用PR(Reconfigurable Partitioning)部分可重組技術，可在不斷電情況下將原先的電路進行重新燒錄，並且不引響其他元件的運作，保有硬體原先效能，能夠重複改寫，是個好厲害的技術。傳統嵌入式必須一次性全部掛在電路(之後來做個比較)。">
-<meta name="keywords" content="Programmer,FPGA">
+<meta name="description" content="我們可以透過props、emit來溝通父子元件，而event bus則是溝通同層組件，但由於太常使用會造成元件複雜化、維護困難，所以當專案龐大時還是請使用Vuex哦!!那我們來看看怎麼用event bus吧~">
+<meta name="keywords" content="Programmer,Vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="FPGA-RSA篇(Xilinx-ZedBoard)">
-<meta property="og:url" content="https://donggualemon.github.io/2018/10/17/FPGA-RSA/index.html">
+<meta property="og:title" content="Vue-EventBus呼叫兄弟組件">
+<meta property="og:url" content="https://donggualemon.github.io/2019/03/14/Vue-eventbus/index.html">
 <meta property="og:site_name" content="我的紀錄">
-<meta property="og:description" content="因為IOT的多項論文提到，IOT的資訊加密的重要性，所以要在電路裡增加加解密，打算要四個加解密方式RSA、AES、DES、3DES，之後擴展為使用PR(Reconfigurable Partitioning)部分可重組技術，可在不斷電情況下將原先的電路進行重新燒錄，並且不引響其他元件的運作，保有硬體原先效能，能夠重複改寫，是個好厲害的技術。傳統嵌入式必須一次性全部掛在電路(之後來做個比較)。">
+<meta property="og:description" content="我們可以透過props、emit來溝通父子元件，而event bus則是溝通同層組件，但由於太常使用會造成元件複雜化、維護困難，所以當專案龐大時還是請使用Vuex哦!!那我們來看看怎麼用event bus吧~">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:image" content="https://donggualemon.github.io/img/zedboard-.jpg">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/RSA.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/vivado.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa1.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa2.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa3.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa4.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa5.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa6.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa7.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa8.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/RSA-1.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/standalone.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/putty.JPG">
-<meta property="og:updated_time" content="2019-09-22T08:43:48.547Z">
+<meta property="og:image" content="https://donggualemon.github.io/img/eventbus.PNG">
+<meta property="og:updated_time" content="2019-09-23T18:26:31.908Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="FPGA-RSA篇(Xilinx-ZedBoard)">
-<meta name="twitter:description" content="因為IOT的多項論文提到，IOT的資訊加密的重要性，所以要在電路裡增加加解密，打算要四個加解密方式RSA、AES、DES、3DES，之後擴展為使用PR(Reconfigurable Partitioning)部分可重組技術，可在不斷電情況下將原先的電路進行重新燒錄，並且不引響其他元件的運作，保有硬體原先效能，能夠重複改寫，是個好厲害的技術。傳統嵌入式必須一次性全部掛在電路(之後來做個比較)。">
-<meta name="twitter:image" content="https://donggualemon.github.io/img/zedboard-.jpg">
+<meta name="twitter:title" content="Vue-EventBus呼叫兄弟組件">
+<meta name="twitter:description" content="我們可以透過props、emit來溝通父子元件，而event bus則是溝通同層組件，但由於太常使用會造成元件複雜化、維護困難，所以當專案龐大時還是請使用Vuex哦!!那我們來看看怎麼用event bus吧~">
+<meta name="twitter:image" content="https://donggualemon.github.io/img/eventbus.PNG">
 
 
 
@@ -135,14 +122,14 @@
 
 
 
-  <link rel="canonical" href="https://donggualemon.github.io/2018/10/17/FPGA-RSA/">
+  <link rel="canonical" href="https://donggualemon.github.io/2019/03/14/Vue-eventbus/">
 
 
 <meta name="google-site-verification" content="yMOSOBJdgXlSZd-wK5hSrhhv2vVKV9lzmlHhfxySuh4">
 
 
 
-  <title>FPGA-RSA篇(Xilinx-ZedBoard) | 我的紀錄</title>
+  <title>Vue-EventBus呼叫兄弟組件 | 我的紀錄</title>
   
 
 
@@ -279,7 +266,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://donggualemon.github.io/2018/10/17/FPGA-RSA/">
+    <link itemprop="mainEntityOfPage" href="https://donggualemon.github.io/2019/03/14/Vue-eventbus/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wei">
@@ -296,7 +283,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">FPGA-RSA篇(Xilinx-ZedBoard)</h1>
+          <h1 class="post-title" itemprop="name headline">Vue-EventBus呼叫兄弟組件</h1>
         
 
         <div class="post-meta">
@@ -308,8 +295,8 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-10-17T00:00:00+08:00">
-                2018-10-17
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2019-03-14T00:00:00+08:00">
+                2019-03-14
               </time>
             
 
@@ -379,13 +366,23 @@
       
 
       
-        <p><img src="/img/zedboard-.jpg" alt><br>因為IOT的多項論文提到，IOT的資訊加密的重要性，所以要在電路裡增加<strong>加解密</strong>，打算要四個加解密方式<code>RSA、AES、DES、3DES</code>，之後擴展為使用<code>PR(Reconfigurable Partitioning)</code>部分可重組技術，可在不斷電情況下將原先的電路進行重新燒錄，並且不引響其他元件的運作，保有硬體原先效能，能夠重複改寫，是個好厲害的技術。傳統嵌入式必須一次性全部掛在電路(之後來做個比較)。</p>
+        <p><img src="/img/eventbus.PNG" alt><br>我們可以透過props、emit來溝通父子元件，而event bus則是溝通同層組件，但由於太常使用會造成元件複雜化、維護困難，所以當專案龐大時還是請使用Vuex哦!!<br>那我們來看看怎麼用event bus吧~</p>
 <a id="more"></a>
+<h1 id="創建橋梁"><a href="#創建橋梁" class="headerlink" title="創建橋梁"></a>創建橋梁</h1><p>創建一個bus.js來當作橋梁，當要使用時再呼叫。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vue()</span><br></pre></td></tr></table></figure>
 
-<h1 id="執行環境與配置"><a href="#執行環境與配置" class="headerlink" title="執行環境與配置"></a>執行環境與配置</h1><p>測試軟體與建置軟體:<strong>Xilinx Vivado2016.4(之後升級為2017) Vivado-SDK</strong><br>硬體:<strong>Xilinx-Zynq 7000 ZedBoard</strong><br>板子環境(這裡只講到Standalone，要不然還要講到kernel driver。):<strong>Xilinx linux3.14(這並不是完整linux環境哦!)</strong></p>
-<h1 id="開始製作IP吧"><a href="#開始製作IP吧" class="headerlink" title="開始製作IP吧!"></a>開始製作IP吧!</h1><p>IP為172.168…..(誤!不是這個IP)，這裡使用<code>VHDL</code>編寫RSA32的程式碼。<br><strong>RSA  Port部分程式碼檔案:</strong><br><img src="/img/RSA/RSA.JPG" alt><br>有了整個的RSA的程式碼，就來把它變成IP吧!<br>打開vivado 2016併選擇<code>manage ip</code>然後新增IP (檔名我們就取個RSA吧):<br><img src="/img/RSA/vivado.JPG" alt><br>建立完成(附註請選擇創造<code>AXI IP</code> 然後透過VHDL我們可以知道需要<code>7</code>個暫存器 <code>clk</code>有系統內建)<br><img src="/img/RSA/rsa1.JPG" alt><br>接著把RSA的相關程式碼用<code>add source</code>加進去，加進去了就開始撰寫IP得配置和暫存器劃分。<br>告訴上層的<code>AXI_inst</code>有什麼配置然後所需的位元大小等等……我將2個OUTPUT設2個訊號接點(signal)<br><img src="/img/RSA/rsa2.JPG" alt><br>然後來分配暫存器囉，還有加上自己的訊號接點，還有<code>user logic</code>並結合上圖的配置。<br><img src="/img/RSA/rsa3.JPG" alt><br><img src="/img/RSA/rsa4.JPG" alt><br>結束存檔會發現一開始匯入的source檔和我們的接線殼合併了(代表吻合囉)!!<br><img src="/img/RSA/rsa5.JPG" alt><br>過來就是跑合成<code>run synthesis</code>看看有沒有問題，沒問題之後就能來打包IP<code>package ip</code>惹YA(記得<code>merge</code>)<br><img src="/img/RSA/rsa6.JPG" alt><br>這就完成IP的生成了。</p>
-<h1 id="開始匯入IP與設置電路"><a href="#開始匯入IP與設置電路" class="headerlink" title="開始匯入IP與設置電路"></a>開始匯入IP與設置電路</h1><p>新建一個檔案並選擇我們的<code>Zedboard(xc7z020clg484-1)</code>板子，然後匯入我們的做好的IP，新增一個<code>block design</code>然後把他丟進去加上主控(PS)。<br><img src="/img/RSA/rsa7.JPG" alt><br>建好之後就來<code>Generate Output Products</code>(生成HDL源文檔和相應端口的約束檔) 和 <code>Create HDL wrapper</code>(生成整個工程的文檔)吧!<br><img src="/img/RSA/rsa8.JPG" alt><br>開始<code>Run Synthesis -&gt; Run Implemented -&gt; Generate Bitstream -&gt; export Hardware -&gt; launch sdk</code> 轉戰SDK。</p>
-<h1 id="SDK做測試"><a href="#SDK做測試" class="headerlink" title="SDK做測試"></a>SDK做測試</h1><p>SDK左上角應該就會跑出你剛剛做完的底層(假如沒有在自己匯入檔案吧)<br><img src="/img/RSA/RSA-1.JPG" alt><br>這裡單純只是做<code>Standalone</code>測試ip是否真的能跑起來，所以新增一個hello word project，並改寫裡面的程式碼。<br>並透過testbench和程式碼判斷哪個暫存器要給什麼值。下面是測資<br><img src="/img/RSA/standalone.JPG" alt><br>寫完就來測試看看吧!拿出我們貴貴的板子，然後請調板子的jump讓他知道只是下板子不是跑SD卡哦!打開後燒錄我們的底層資訊吧，然後打開putty連進去看狀態並run一下剛剛寫的測試資料。<br><img src="/img/RSA/putty.JPG" alt><br>成功之後就是這樣，很多地方都是提到而已並沒有詳細講下去，有興趣的朋友歡迎討論與指教。</p>
+<p>這樣我們就創造出了一個新的vue的實例。在我們需要使用的地方做引入。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> bus <span class="keyword">from</span> <span class="string">'./bus.js'</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>在我們要發送資訊或要呼叫事件的地方，做一個中樞廣播動作。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    methods: &#123;</span><br><span class="line">        doSomething: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            bus.$emit(<span class="string">'Event'</span>, &#123;</span><br><span class="line">                msg: <span class="string">'Test.'</span></span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在任何想要接收訊息的地方去做接收的動作。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">created()&#123;</span><br><span class="line">    bus.$on(<span class="string">'Event'</span>,data=&gt;&#123;</span><br><span class="line">      <span class="keyword">this</span>.myname=data;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">beforeDestroy: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// [銷毀監聽事件]</span></span><br><span class="line">        <span class="comment">// 最好在组件銷毀前，清除 Event 所有監聽 </span></span><br><span class="line">        <span class="comment">// 如果要指定哪個監聽對應方法，就需要傳入第二個參數(對應$on設定的方法)</span></span><br><span class="line">        bus.$off(<span class="string">'Event'</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>這樣就能在任何的元件中可以拿到想要的數據，但如果是父子元件則不建議使用。</p>
+</blockquote>
 
       
     </div>
@@ -405,7 +402,7 @@
           
             <a href="/tags/Programmer/" rel="tag"># Programmer</a>
           
-            <a href="/tags/FPGA/" rel="tag"># FPGA</a>
+            <a href="/tags/Vue/" rel="tag"># Vue</a>
           
         </div>
       
@@ -418,14 +415,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/11/27/Vue-todolist2/" rel="next" title="Vue-todolist小實做2">
+                <i class="fa fa-chevron-left"></i> Vue-todolist小實做2
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/10/18/FPGA-AES/" rel="prev" title="FPGA-AES篇(Xilinx-ZedBoard)">
-                FPGA-AES篇(Xilinx-ZedBoard) <i class="fa fa-chevron-right"></i>
+              <a href="/2019/05/29/gitlab-ci/" rel="prev" title="線上使用Gitlab-CI">
+                線上使用Gitlab-CI <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -574,7 +575,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#執行環境與配置"><span class="nav-number">1.</span> <span class="nav-text">執行環境與配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#開始製作IP吧"><span class="nav-number">2.</span> <span class="nav-text">開始製作IP吧!</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#開始匯入IP與設置電路"><span class="nav-number">3.</span> <span class="nav-text">開始匯入IP與設置電路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SDK做測試"><span class="nav-number">4.</span> <span class="nav-text">SDK做測試</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#創建橋梁"><span class="nav-number">1.</span> <span class="nav-text">創建橋梁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用"><span class="nav-number">2.</span> <span class="nav-text">使用</span></a></li></ol></div>
             
 
           </div>

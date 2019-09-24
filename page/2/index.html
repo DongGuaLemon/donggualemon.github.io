@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Programmer,FPGA,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -79,33 +79,16 @@
 
 
 
-<meta name="description" content="因為IOT的多項論文提到，IOT的資訊加密的重要性，所以要在電路裡增加加解密，打算要四個加解密方式RSA、AES、DES、3DES，之後擴展為使用PR(Reconfigurable Partitioning)部分可重組技術，可在不斷電情況下將原先的電路進行重新燒錄，並且不引響其他元件的運作，保有硬體原先效能，能夠重複改寫，是個好厲害的技術。傳統嵌入式必須一次性全部掛在電路(之後來做個比較)。">
-<meta name="keywords" content="Programmer,FPGA">
-<meta property="og:type" content="article">
-<meta property="og:title" content="FPGA-RSA篇(Xilinx-ZedBoard)">
-<meta property="og:url" content="https://donggualemon.github.io/2018/10/17/FPGA-RSA/index.html">
+<meta name="description" content="code/work/life">
+<meta property="og:type" content="website">
+<meta property="og:title" content="我的紀錄">
+<meta property="og:url" content="https://donggualemon.github.io/page/2/index.html">
 <meta property="og:site_name" content="我的紀錄">
-<meta property="og:description" content="因為IOT的多項論文提到，IOT的資訊加密的重要性，所以要在電路裡增加加解密，打算要四個加解密方式RSA、AES、DES、3DES，之後擴展為使用PR(Reconfigurable Partitioning)部分可重組技術，可在不斷電情況下將原先的電路進行重新燒錄，並且不引響其他元件的運作，保有硬體原先效能，能夠重複改寫，是個好厲害的技術。傳統嵌入式必須一次性全部掛在電路(之後來做個比較)。">
+<meta property="og:description" content="code/work/life">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:image" content="https://donggualemon.github.io/img/zedboard-.jpg">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/RSA.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/vivado.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa1.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa2.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa3.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa4.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa5.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa6.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa7.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/rsa8.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/RSA-1.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/standalone.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/RSA/putty.JPG">
-<meta property="og:updated_time" content="2019-09-22T08:43:48.547Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="FPGA-RSA篇(Xilinx-ZedBoard)">
-<meta name="twitter:description" content="因為IOT的多項論文提到，IOT的資訊加密的重要性，所以要在電路裡增加加解密，打算要四個加解密方式RSA、AES、DES、3DES，之後擴展為使用PR(Reconfigurable Partitioning)部分可重組技術，可在不斷電情況下將原先的電路進行重新燒錄，並且不引響其他元件的運作，保有硬體原先效能，能夠重複改寫，是個好厲害的技術。傳統嵌入式必須一次性全部掛在電路(之後來做個比較)。">
-<meta name="twitter:image" content="https://donggualemon.github.io/img/zedboard-.jpg">
+<meta name="twitter:title" content="我的紀錄">
+<meta name="twitter:description" content="code/work/life">
 
 
 
@@ -135,14 +118,14 @@
 
 
 
-  <link rel="canonical" href="https://donggualemon.github.io/2018/10/17/FPGA-RSA/">
+  <link rel="canonical" href="https://donggualemon.github.io/page/2/">
 
 
 <meta name="google-site-verification" content="yMOSOBJdgXlSZd-wK5hSrhhv2vVKV9lzmlHhfxySuh4">
 
 
 
-  <title>FPGA-RSA篇(Xilinx-ZedBoard) | 我的紀錄</title>
+  <title>我的紀錄</title>
   
 
 
@@ -161,7 +144,8 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -264,9 +248,323 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://donggualemon.github.io/2018/10/19/FPGA-DES/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wei">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的紀錄">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/19/FPGA-DES/" itemprop="url">FPGA-DES篇(Xilinx-ZedBoard)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-10-19T00:00:00+08:00">
+                2018-10-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programmer/" itemprop="url" rel="index">
+                    <span itemprop="name">Programmer</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programmer/舊文章搬遷/" itemprop="url" rel="index">
+                    <span itemprop="name">舊文章搬遷</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="/img/zedboard-.jpg" alt><br>我是利用Xilinx官方提供的xapp270文件來做改寫，原本的文件的DES是利用vhdl的to語法，照之前的AES、RSA的方法很順利成功了，但是在我準備做<code>PR(Reconfigurable Partitioning)</code>發現了一件嚴重的問題!</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/10/19/FPGA-DES/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://donggualemon.github.io/2018/10/18/FPGA-AES/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wei">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的紀錄">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/18/FPGA-AES/" itemprop="url">FPGA-AES篇(Xilinx-ZedBoard)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-10-18T00:00:00+08:00">
+                2018-10-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programmer/" itemprop="url" rel="index">
+                    <span itemprop="name">Programmer</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programmer/舊文章搬遷/" itemprop="url" rel="index">
+                    <span itemprop="name">舊文章搬遷</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="/img/zedboard-.jpg" alt><br>經過上次做RSA的加解密經驗，再做其他的一樣也是依樣畫葫蘆，所以這次的流程會比較簡化，畢竟都一樣只有位元數(RSA32位元AES128位元)、測試、程式碼、暫存器配置不同。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/10/18/FPGA-AES/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
 
   
 
@@ -296,7 +594,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">FPGA-RSA篇(Xilinx-ZedBoard)</h1>
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/17/FPGA-RSA/" itemprop="url">FPGA-RSA篇(Xilinx-ZedBoard)</a></h1>
         
 
         <div class="post-meta">
@@ -379,14 +679,16 @@
       
 
       
-        <p><img src="/img/zedboard-.jpg" alt><br>因為IOT的多項論文提到，IOT的資訊加密的重要性，所以要在電路裡增加<strong>加解密</strong>，打算要四個加解密方式<code>RSA、AES、DES、3DES</code>，之後擴展為使用<code>PR(Reconfigurable Partitioning)</code>部分可重組技術，可在不斷電情況下將原先的電路進行重新燒錄，並且不引響其他元件的運作，保有硬體原先效能，能夠重複改寫，是個好厲害的技術。傳統嵌入式必須一次性全部掛在電路(之後來做個比較)。</p>
-<a id="more"></a>
-
-<h1 id="執行環境與配置"><a href="#執行環境與配置" class="headerlink" title="執行環境與配置"></a>執行環境與配置</h1><p>測試軟體與建置軟體:<strong>Xilinx Vivado2016.4(之後升級為2017) Vivado-SDK</strong><br>硬體:<strong>Xilinx-Zynq 7000 ZedBoard</strong><br>板子環境(這裡只講到Standalone，要不然還要講到kernel driver。):<strong>Xilinx linux3.14(這並不是完整linux環境哦!)</strong></p>
-<h1 id="開始製作IP吧"><a href="#開始製作IP吧" class="headerlink" title="開始製作IP吧!"></a>開始製作IP吧!</h1><p>IP為172.168…..(誤!不是這個IP)，這裡使用<code>VHDL</code>編寫RSA32的程式碼。<br><strong>RSA  Port部分程式碼檔案:</strong><br><img src="/img/RSA/RSA.JPG" alt><br>有了整個的RSA的程式碼，就來把它變成IP吧!<br>打開vivado 2016併選擇<code>manage ip</code>然後新增IP (檔名我們就取個RSA吧):<br><img src="/img/RSA/vivado.JPG" alt><br>建立完成(附註請選擇創造<code>AXI IP</code> 然後透過VHDL我們可以知道需要<code>7</code>個暫存器 <code>clk</code>有系統內建)<br><img src="/img/RSA/rsa1.JPG" alt><br>接著把RSA的相關程式碼用<code>add source</code>加進去，加進去了就開始撰寫IP得配置和暫存器劃分。<br>告訴上層的<code>AXI_inst</code>有什麼配置然後所需的位元大小等等……我將2個OUTPUT設2個訊號接點(signal)<br><img src="/img/RSA/rsa2.JPG" alt><br>然後來分配暫存器囉，還有加上自己的訊號接點，還有<code>user logic</code>並結合上圖的配置。<br><img src="/img/RSA/rsa3.JPG" alt><br><img src="/img/RSA/rsa4.JPG" alt><br>結束存檔會發現一開始匯入的source檔和我們的接線殼合併了(代表吻合囉)!!<br><img src="/img/RSA/rsa5.JPG" alt><br>過來就是跑合成<code>run synthesis</code>看看有沒有問題，沒問題之後就能來打包IP<code>package ip</code>惹YA(記得<code>merge</code>)<br><img src="/img/RSA/rsa6.JPG" alt><br>這就完成IP的生成了。</p>
-<h1 id="開始匯入IP與設置電路"><a href="#開始匯入IP與設置電路" class="headerlink" title="開始匯入IP與設置電路"></a>開始匯入IP與設置電路</h1><p>新建一個檔案並選擇我們的<code>Zedboard(xc7z020clg484-1)</code>板子，然後匯入我們的做好的IP，新增一個<code>block design</code>然後把他丟進去加上主控(PS)。<br><img src="/img/RSA/rsa7.JPG" alt><br>建好之後就來<code>Generate Output Products</code>(生成HDL源文檔和相應端口的約束檔) 和 <code>Create HDL wrapper</code>(生成整個工程的文檔)吧!<br><img src="/img/RSA/rsa8.JPG" alt><br>開始<code>Run Synthesis -&gt; Run Implemented -&gt; Generate Bitstream -&gt; export Hardware -&gt; launch sdk</code> 轉戰SDK。</p>
-<h1 id="SDK做測試"><a href="#SDK做測試" class="headerlink" title="SDK做測試"></a>SDK做測試</h1><p>SDK左上角應該就會跑出你剛剛做完的底層(假如沒有在自己匯入檔案吧)<br><img src="/img/RSA/RSA-1.JPG" alt><br>這裡單純只是做<code>Standalone</code>測試ip是否真的能跑起來，所以新增一個hello word project，並改寫裡面的程式碼。<br>並透過testbench和程式碼判斷哪個暫存器要給什麼值。下面是測資<br><img src="/img/RSA/standalone.JPG" alt><br>寫完就來測試看看吧!拿出我們貴貴的板子，然後請調板子的jump讓他知道只是下板子不是跑SD卡哦!打開後燒錄我們的底層資訊吧，然後打開putty連進去看狀態並run一下剛剛寫的測試資料。<br><img src="/img/RSA/putty.JPG" alt><br>成功之後就是這樣，很多地方都是提到而已並沒有詳細講下去，有興趣的朋友歡迎討論與指教。</p>
-
+        
+          <p><img src="/img/zedboard-.jpg" alt><br>因為IOT的多項論文提到，IOT的資訊加密的重要性，所以要在電路裡增加<strong>加解密</strong>，打算要四個加解密方式<code>RSA、AES、DES、3DES</code>，之後擴展為使用<code>PR(Reconfigurable Partitioning)</code>部分可重組技術，可在不斷電情況下將原先的電路進行重新燒錄，並且不引響其他元件的運作，保有硬體原先效能，能夠重複改寫，是個好厲害的技術。傳統嵌入式必須一次性全部掛在電路(之後來做個比較)。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/10/17/FPGA-RSA/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
     
@@ -401,38 +703,14 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Programmer/" rel="tag"># Programmer</a>
-          
-            <a href="/tags/FPGA/" rel="tag"># FPGA</a>
-          
-        </div>
+
+      
+
       
 
       
       
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/10/18/FPGA-AES/" rel="prev" title="FPGA-AES篇(Xilinx-ZedBoard)">
-                FPGA-AES篇(Xilinx-ZedBoard) <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -442,11 +720,14 @@
   </article>
 
 
+    
+  </section>
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
           </div>
@@ -454,10 +735,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -478,17 +755,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目錄
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            本站概覽
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -564,22 +832,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#執行環境與配置"><span class="nav-number">1.</span> <span class="nav-text">執行環境與配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#開始製作IP吧"><span class="nav-number">2.</span> <span class="nav-text">開始製作IP吧!</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#開始匯入IP與設置電路"><span class="nav-number">3.</span> <span class="nav-text">開始匯入IP與設置電路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SDK做測試"><span class="nav-number">4.</span> <span class="nav-text">SDK做測試</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -720,10 +972,6 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
