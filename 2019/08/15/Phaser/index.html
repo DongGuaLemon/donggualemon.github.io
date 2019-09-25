@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Programmer,FPGA,">
+  <meta name="keywords" content="Programmer,Phaser,">
 
 
 
@@ -79,30 +79,22 @@
 
 
 
-<meta name="description" content="經過上次做RSA的加解密經驗，再做其他的一樣也是依樣畫葫蘆，所以這次的流程會比較簡化，畢竟都一樣只有位元數(RSA32位元AES128位元)、測試、程式碼、暫存器配置不同。">
-<meta name="keywords" content="Programmer,FPGA">
+<meta name="description" content="因為參加F2E精神時光屋活動的直播讓我知道了Phaser.js，也讓我著手用來做了小遊戲，順便當成F2E的功課。Phaser2是利用Pixi.js為基底製作，而3是完全隔離出來的，而且蠻容易上手，很適合做些小遊戲來玩玩。官方連結">
+<meta name="keywords" content="Programmer,Phaser">
 <meta property="og:type" content="article">
-<meta property="og:title" content="FPGA-AES篇(Xilinx-ZedBoard)">
-<meta property="og:url" content="https://donggualemon.github.io/2018/10/18/FPGA-AES/index.html">
+<meta property="og:title" content="第一次Phaser.js做2D遊戲">
+<meta property="og:url" content="https://donggualemon.github.io/2019/08/15/Phaser/index.html">
 <meta property="og:site_name" content="我的紀錄">
-<meta property="og:description" content="經過上次做RSA的加解密經驗，再做其他的一樣也是依樣畫葫蘆，所以這次的流程會比較簡化，畢竟都一樣只有位元數(RSA32位元AES128位元)、測試、程式碼、暫存器配置不同。">
+<meta property="og:description" content="因為參加F2E精神時光屋活動的直播讓我知道了Phaser.js，也讓我著手用來做了小遊戲，順便當成F2E的功課。Phaser2是利用Pixi.js為基底製作，而3是完全隔離出來的，而且蠻容易上手，很適合做些小遊戲來玩玩。官方連結">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:image" content="https://donggualemon.github.io/img/zedboard-.jpg">
-<meta property="og:image" content="https://donggualemon.github.io/img/AES/aes.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/AES/aes2.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/AES/aes3.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/AES/aes4.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/AES/aes5.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/AES/aes6.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/AES/aes7.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/AES/aes8.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/AES/aes9.JPG">
-<meta property="og:image" content="https://donggualemon.github.io/img/AES/aes10.JPG">
-<meta property="og:updated_time" content="2019-09-22T09:27:14.865Z">
+<meta property="og:image" content="https://donggualemon.github.io/img/phaser/phaser.png">
+<meta property="og:image" content="https://donggualemon.github.io/img/phaser/1.PNG">
+<meta property="og:image" content="https://donggualemon.github.io/img/phaser/2.PNG">
+<meta property="og:updated_time" content="2019-09-25T07:45:28.788Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="FPGA-AES篇(Xilinx-ZedBoard)">
-<meta name="twitter:description" content="經過上次做RSA的加解密經驗，再做其他的一樣也是依樣畫葫蘆，所以這次的流程會比較簡化，畢竟都一樣只有位元數(RSA32位元AES128位元)、測試、程式碼、暫存器配置不同。">
-<meta name="twitter:image" content="https://donggualemon.github.io/img/zedboard-.jpg">
+<meta name="twitter:title" content="第一次Phaser.js做2D遊戲">
+<meta name="twitter:description" content="因為參加F2E精神時光屋活動的直播讓我知道了Phaser.js，也讓我著手用來做了小遊戲，順便當成F2E的功課。Phaser2是利用Pixi.js為基底製作，而3是完全隔離出來的，而且蠻容易上手，很適合做些小遊戲來玩玩。官方連結">
+<meta name="twitter:image" content="https://donggualemon.github.io/img/phaser/phaser.png">
 
 
 
@@ -132,14 +124,14 @@
 
 
 
-  <link rel="canonical" href="https://donggualemon.github.io/2018/10/18/FPGA-AES/">
+  <link rel="canonical" href="https://donggualemon.github.io/2019/08/15/Phaser/">
 
 
 <meta name="google-site-verification" content="yMOSOBJdgXlSZd-wK5hSrhhv2vVKV9lzmlHhfxySuh4">
 
 
 
-  <title>FPGA-AES篇(Xilinx-ZedBoard) | 我的紀錄</title>
+  <title>第一次Phaser.js做2D遊戲 | 我的紀錄</title>
   
 
 
@@ -276,7 +268,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://donggualemon.github.io/2018/10/18/FPGA-AES/">
+    <link itemprop="mainEntityOfPage" href="https://donggualemon.github.io/2019/08/15/Phaser/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wei">
@@ -293,7 +285,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">FPGA-AES篇(Xilinx-ZedBoard)</h1>
+          <h1 class="post-title" itemprop="name headline">第一次Phaser.js做2D遊戲</h1>
         
 
         <div class="post-meta">
@@ -305,8 +297,8 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-10-18T00:00:00+08:00">
-                2018-10-18
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2019-08-15T00:00:00+08:00">
+                2019-08-15
               </time>
             
 
@@ -376,27 +368,30 @@
       
 
       
-        <p><img src="/img/zedboard-.jpg" alt><br>經過上次做RSA的加解密經驗，再做其他的一樣也是依樣畫葫蘆，所以這次的流程會比較簡化，畢竟都一樣只有位元數(RSA32位元AES128位元)、測試、程式碼、暫存器配置不同。</p>
+        <p><img src="/img/phaser/phaser.png" alt><br>因為參加F2E精神時光屋活動的直播讓我知道了Phaser.js，也讓我著手用來做了小遊戲，順便當成F2E的功課。<br>Phaser2是利用Pixi.js為基底製作，而3是完全隔離出來的，而且蠻容易上手，很適合做些小遊戲來玩玩。<a href="https://phaser.io/" title="link" target="_blank" rel="noopener">官方連結</a></p>
 <a id="more"></a>
-<h1 id="開始製作IP"><a href="#開始製作IP" class="headerlink" title="開始製作IP"></a>開始製作IP</h1><p>AES128程式碼的Port部分:<br><img src="/img/AES/aes.JPG" alt><br>這次需要13個暫存器，因為板子的Data width只能傳輸32位元，所以超過就要拆開來去分配，key data_in各2個 data_out需要4個。<br>照慣例匯入source之後開始配暫存器以下為程式碼。<br><img src="/img/AES/aes2.JPG" alt></p>
+<h1 id="遊戲介紹"><a href="#遊戲介紹" class="headerlink" title="遊戲介紹"></a>遊戲介紹</h1><p>這次我做了一個外太空飛船閃躲障礙物的小遊戲。(感謝精神時光屋的UI設計投稿者)<br><img src="/img/phaser/1.PNG" alt></p>
 <blockquote>
-<p>因為超過32位元沒辦法一次寫完，所以我們要自己再寫signal去配置。</p>
+<p>閃避障礙物透過鍵盤控制</p>
 </blockquote>
-<p><img src="/img/AES/aes3.JPG" alt></p>
+<p><img src="/img/phaser/2.PNG" alt></p>
 <blockquote>
-<p>告訴他們key_signal和data_in_signal是不同暫存器組成。</p>
+<p>假如受到誤裡碰撞會死掉</p>
 </blockquote>
-<p><img src="/img/AES/aes4.JPG" alt></p>
+<p>非常簡單又上手的小遊戲，大家可以玩玩看，雖然沒有寫得非常完整。<a href="https://donggualemon.github.io/f2e5week/" title="link">連結</a><br>而這篇文章大概算是紀錄而已，所以沒有詳細的教學，之後如果有時間或更深入研究在來寫教學文章。(然後做遊戲圖片超重要，希望人人都有設計師!!)<br>先去官方網站clone或用CDN引入lib~~<br>然後建立個index.html吧，並在body部分引入所需的js</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">'./lib/phaser.min.js'</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">'./js/index.js'</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>而div區塊的id是妳phaser.js，config上設定來layout canvas的部分。在我們的index.js來開始使用phaser吧。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> config=&#123;</span><br><span class="line">    type: Phaser.AUTO,<span class="comment">//type有Canvas and WebGL AUTO則是有WebGL就用WebGL</span></span><br><span class="line">    width: <span class="number">1200</span>,<span class="comment">//設定你要layout的寬度就像做canvas</span></span><br><span class="line">    height: <span class="built_in">window</span>.innerHeight,<span class="comment">//設定高度</span></span><br><span class="line">    parent: <span class="string">'app'</span>,<span class="comment">//妳要layout區塊的id</span></span><br><span class="line">    scene: [GameStart],<span class="comment">//場景做變換或呈現所要用的</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> game = <span class="keyword">new</span> Phaser.Game(config) <span class="comment">//宣告遊戲物件</span></span><br></pre></td></tr></table></figure>
+
+<p>這樣妳就能看到有畫面啦，一個黑色場景的canvas。<br>接下來我們要布置GameStart的場景。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> GameStart=&#123;</span><br><span class="line">    key:<span class="string">'Game'</span>,</span><br><span class="line">    preload () &#123;&#125;,</span><br><span class="line">    create() &#123;&#125;,</span><br><span class="line">    update() &#123;&#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>而<code>preload</code> <code>create</code> <code>update</code>就像生命週期一樣，我們在preload載入圖片、預先檔案，在<code>create</code>生成我們要的物件、配置圖片位置等等，<code>create</code>執行完後則是換<code>update</code> 利用fps60的速度來不斷重新渲染畫面，我們所對遊戲的控制、物理引擎、邏輯都是寫在這裡，讓他一直不斷更新。</p>
 <blockquote>
-<p>配置暫存器。</p>
+<p>記得要用Server方式去執行哦!!不然會報錯。</p>
 </blockquote>
-<p>這樣就寫好囉，那就存檔並且合成吧!結束之後開始packge ip(記得merge)。</p>
-<h1 id="開始匯入IP與設置電路"><a href="#開始匯入IP與設置電路" class="headerlink" title="開始匯入IP與設置電路"></a>開始匯入IP與設置電路</h1><p>過來就一樣開啟舊專案或新專案來放置我們IP，因為只是測試所以我只放新IP要不然燒錄時間會拖長。(PS:記得在專案內引進自己做得IP哦)<br><img src="/img/AES/aes5.JPG" alt><br>一樣動作<code>Generate Output Products-&gt;Create HDL warpper</code><br>完成後<code>Run Synthesis -&gt; Run Implemented -&gt; Generate Bitstream</code><br>跑完就<code>export Hardware-&gt; launch sdk</code> 轉戰SDK囉。</p>
-<h1 id="SDK做測試"><a href="#SDK做測試" class="headerlink" title="SDK做測試"></a>SDK做測試</h1><p>如果是用舊專案可以把原本的SDK先刪掉或關掉，再去生成比較好有時候生出來還是舊的沒更新成新的電路。<br><img src="/img/AES/aes6.JPG" alt></p>
-<blockquote>
-<p>注意看看是不是新的AES哦!</p>
-</blockquote>
-<p>一樣開啟一個專案來並寫上測試:<br><img src="/img/AES/aes7.JPG" alt><br><img src="/img/AES/aes8.JPG" alt><br><img src="/img/AES/aes9.JPG" alt><br>透過程式碼能知道load是告訴程式後面的值還要輸入的開關，mode的開關是加解密開關，start是告訴程式是否已經準備好，done則是做完的時候會立起flag在繼續往下。<br>過來就是開putty去跑板子試試看啦!<br><img src="/img/AES/aes10.JPG" alt><br>這就是AES128從IP到Standalone的流程啦。</p>
+<p>接下來就是利用官方API時間啦~~最基本設置就是這樣，而其他場景運用配置等等，就之後來寫吧!!<br>我的遊戲<a href="https://github.com/DongGuaLemon/f2e5week" title="link" target="_blank" rel="noopener">github連結程式碼</a>大家可以摸索看看。</p>
 
       
     </div>
@@ -416,7 +411,7 @@
           
             <a href="/tags/Programmer/" rel="tag"># Programmer</a>
           
-            <a href="/tags/FPGA/" rel="tag"># FPGA</a>
+            <a href="/tags/Phaser/" rel="tag"># Phaser</a>
           
         </div>
       
@@ -429,8 +424,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/17/FPGA-RSA/" rel="next" title="FPGA-RSA篇(Xilinx-ZedBoard)">
-                <i class="fa fa-chevron-left"></i> FPGA-RSA篇(Xilinx-ZedBoard)
+              <a href="/2019/05/29/gitlab-ci/" rel="next" title="線上使用Gitlab-CI">
+                <i class="fa fa-chevron-left"></i> 線上使用Gitlab-CI
               </a>
             
           </div>
@@ -439,8 +434,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/10/19/FPGA-DES/" rel="prev" title="FPGA-DES篇(Xilinx-ZedBoard)">
-                FPGA-DES篇(Xilinx-ZedBoard) <i class="fa fa-chevron-right"></i>
+              <a href="/2019/09/20/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -589,7 +584,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#開始製作IP"><span class="nav-number">1.</span> <span class="nav-text">開始製作IP</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#開始匯入IP與設置電路"><span class="nav-number">2.</span> <span class="nav-text">開始匯入IP與設置電路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SDK做測試"><span class="nav-number">3.</span> <span class="nav-text">SDK做測試</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#遊戲介紹"><span class="nav-number">1.</span> <span class="nav-text">遊戲介紹</span></a></li></ol></div>
             
 
           </div>

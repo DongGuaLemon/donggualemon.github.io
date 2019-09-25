@@ -88,7 +88,12 @@
 <meta property="og:description" content="最近因為要引入CI/CD所以研究了一下CI/CD，各種工具百百種Travis CI  Circle CI…..因為專案用Gitlab做版控，所以研究好用又方便不用當輪子業者的線上Gitlab CI。為了減省人力成本和時間，會使用自動化測試與部屬，而Gitlab就有內建CI/CD的功能，只要commit跟push之後便會自行進入CI流程，把執行結果告訴使用者看有沒有成功或測試時發生錯誤，來達到自動測">
 <meta property="og:locale" content="zh-tw">
 <meta property="og:image" content="https://donggualemon.github.io/img/gitlabci/gitlab.jpg">
-<meta property="og:updated_time" content="2019-09-24T09:48:24.850Z">
+<meta property="og:image" content="https://donggualemon.github.io/img/gitlabci/ci.PNG">
+<meta property="og:image" content="https://donggualemon.github.io/img/gitlabci/yml.PNG">
+<meta property="og:image" content="https://donggualemon.github.io/img/gitlabci/11.PNG">
+<meta property="og:image" content="https://donggualemon.github.io/img/gitlabci/setting.PNG">
+<meta property="og:image" content="https://donggualemon.github.io/img/gitlabci/job.PNG">
+<meta property="og:updated_time" content="2019-09-25T07:30:39.429Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="線上使用Gitlab-CI">
 <meta name="twitter:description" content="最近因為要引入CI/CD所以研究了一下CI/CD，各種工具百百種Travis CI  Circle CI…..因為專案用Gitlab做版控，所以研究好用又方便不用當輪子業者的線上Gitlab CI。為了減省人力成本和時間，會使用自動化測試與部屬，而Gitlab就有內建CI/CD的功能，只要commit跟push之後便會自行進入CI流程，把執行結果告訴使用者看有沒有成功或測試時發生錯誤，來達到自動測">
@@ -366,8 +371,10 @@
       
 
       
-        <p><img src="/img/gitlabci/gitlab.jpg" alt><br>最近因為要引入CI/CD所以研究了一下CI/CD，各種工具百百種Travis CI  Circle CI…..<br>因為專案用Gitlab做版控，所以研究好用又方便不用當輪子業者的線上Gitlab CI。<br>為了減省人力成本和時間，會使用自動化測試與部屬，而Gitlab就有內建<code>CI/CD</code>的功能，只要<code>commit</code>跟<code>push</code>之後便會自行進入CI流程，把執行結果告訴使用者看有沒有成功或測試時發生錯誤，來達到自動測試的功能，這篇只是粗淺的說一下，畢竟自己也是小菜雞做個筆記。</p>
+        <p><img src="/img/gitlabci/gitlab.jpg" alt><br>最近因為要引入CI/CD所以研究了一下CI/CD，各種工具百百種Travis CI  Circle CI…..<br>因為專案用Gitlab做版控，所以研究好用又方便不用當輪子業者的線上Gitlab CI。<br>為了減省人力成本和時間，會使用自動化測試與部屬，而Gitlab就有內建<code>CI/CD</code>的功能，只要<code>commit</code>跟<code>push</code>之後便會自行進入CI流程，把執行結果告訴使用者看有沒有成功或測試時發生錯誤，來達到自動測試的功能，這篇只是粗淺的說一下，畢竟自己也是新手做個筆記。</p>
 <a id="more"></a>
+<h1 id="簡單解說"><a href="#簡單解說" class="headerlink" title="簡單解說"></a>簡單解說</h1><p>我們在自己gitlab專案增加一個檔案，建議在練習的時候可以把流程建在branch，這樣比較清楚。<br><img src="/img/gitlabci/ci.PNG" alt><br>須建立一個<code>.gitlab-ci.yml</code>的設定檔。<br><img src="/img/gitlabci/yml.PNG" alt><br>這時候底下就是用來寫CI的流程了，是不是很方便。<br><img src="/img/gitlabci/11.PNG" alt><br>大概的形式長這個樣子，不過還是要看每個人的配置，上面只是粗淺的格式表達，可以去Gitlab官網查詢<a href="https://docs.gitlab.com/ee/ci/yaml/README.html" title="link" target="_blank" rel="noopener">按這裡</a>。</p>
+<p>寫完之後存起來我們就能到左邊的slid bar的CI/CD裡去看我們寫的配置。<br><img src="/img/gitlabci/setting.PNG" alt><br>可以看到狀態等等，而每次的<code>commit push</code>都會自動進入這個環節。<br>在job區可以看到運行流程與發生問題的地方，供使用者查詢與通知。<br><img src="/img/gitlabci/job.PNG" alt><br>這就是個粗淺的Gitlab CI介紹啦~~還是有更深入的區塊，像是結合docker AWS等等還是很多複雜的東西，所以各位加油啦!!小弟要更深入研究，假如有什麼新的發現在與大家分享。</p>
 
       
     </div>
@@ -410,8 +417,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/09/20/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
+              <a href="/2019/08/15/Phaser/" rel="prev" title="第一次Phaser.js做2D遊戲">
+                第一次Phaser.js做2D遊戲 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -464,8 +471,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概覽
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -502,7 +518,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">標籤</span>
                 </a>
               </div>
@@ -541,6 +557,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#簡單解說"><span class="nav-number">1.</span> <span class="nav-text">簡單解說</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
