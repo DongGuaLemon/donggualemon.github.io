@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-tw">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="面試,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="前言國立學店大學(比112多一個T)的資工系學生，成績15%左右很戳，專題做嵌入式Xilinx-zedboard、底層IP、kernel module、RP，但實習法人單位和工作都是做web相關，主要維護和開發框架Vue.js、Express，碰過docker、gitlabCI。 交大第一階段甄試，看丙組、丁組、戊組自己覺得比較適合丙組(有IOT、嵌入式)、戊組，丁組因為系統管理我很少接觸，自己都">
+<meta name="keywords" content="面試">
+<meta property="og:type" content="article">
+<meta property="og:title" content="交大資工-丁戊組、成大乙組">
+<meta property="og:url" content="https://donggualemon.github.io/2019/10/31/NCTU-NCKU/index.html">
+<meta property="og:site_name" content="我的紀錄">
+<meta property="og:description" content="前言國立學店大學(比112多一個T)的資工系學生，成績15%左右很戳，專題做嵌入式Xilinx-zedboard、底層IP、kernel module、RP，但實習法人單位和工作都是做web相關，主要維護和開發框架Vue.js、Express，碰過docker、gitlabCI。 交大第一階段甄試，看丙組、丁組、戊組自己覺得比較適合丙組(有IOT、嵌入式)、戊組，丁組因為系統管理我很少接觸，自己都">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2019-11-03T13:47:31.308Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="交大資工-丁戊組、成大乙組">
+<meta name="twitter:description" content="前言國立學店大學(比112多一個T)的資工系學生，成績15%左右很戳，專題做嵌入式Xilinx-zedboard、底層IP、kernel module、RP，但實習法人單位和工作都是做web相關，主要維護和開發框架Vue.js、Express，碰過docker、gitlabCI。 交大第一階段甄試，看丙組、丁組、戊組自己覺得比較適合丙組(有IOT、嵌入式)、戊組，丁組因為系統管理我很少接觸，自己都">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://donggualemon.github.io/2019/10/31/NCTU-NCKU/">
+
+
+<meta name="google-site-verification" content="yMOSOBJdgXlSZd-wK5hSrhhv2vVKV9lzmlHhfxySuh4">
+
+
+
+  <title>交大資工-丁戊組、成大乙組 | 我的紀錄</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-tw">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">我的紀錄</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">紀錄大大小小的事情</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            標籤
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分類
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            歸檔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            關於
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://donggualemon.github.io/2019/10/31/NCTU-NCKU/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wei">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的紀錄">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">交大資工-丁戊組、成大乙組</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2019-10-31T14:18:21+08:00">
+                2019-10-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/面試/" itemprop="url" rel="index">
+                    <span itemprop="name">面試</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>國立學店大學(比112多一個T)的資工系學生，成績15%左右很戳，專題做嵌入式Xilinx-zedboard、底層IP、kernel module、RP，但實習法人單位和工作都是做web相關，主要維護和開發框架Vue.js、Express，碰過docker、gitlabCI。</p>
+<p>交大第一階段甄試，看丙組、丁組、戊組自己覺得比較適合丙組(有IOT、嵌入式)、戊組，丁組因為系統管理我很少接觸，自己都是開發為主，但還是三個都報名，結果意外的上丁、戊組，哪尼難道我嵌入式太戳了ㄇ?結果現場看丙組好像都變成AI、影像辨識那方面的。</p>
+<p>成大有甲乙組，甲是學霸組、乙是特殊組，上了乙組甲組被刷掉。</p>
+<a id="more"></a>
+<p>丁組分兩天面試<br>第一天性向測驗、學長的面試。<br>第二天教授面試。</p>
+<p>戊組只有一天<br>早上性向測驗，下午教授面試。</p>
+<p>成大乙組只有7分鐘面試。</p>
+<h2 id="丁組筆試性向測驗"><a href="#丁組筆試性向測驗" class="headerlink" title="丁組筆試性向測驗"></a>丁組筆試性向測驗</h2><p>非常多張的考卷都是A4的大概15張左右的題目，總共有3小時能寫我寫一個小時半就掛機登出了，全部都是問你實作經驗而且蠻深入的(分六大區塊前端、後端、GIT、VM&amp;Linux、FreeBSD、Mail server)，會問你什麼和什麼之間區別、特色是什麼、用到什麼功能。大該記住幾題分享給大家。</p>
+<h3 id="前端"><a href="#前端" class="headerlink" title="前端:"></a>前端:</h3><pre><code>1.用過什麼前端框架，或是原生的架構寫前端?
+2.問CSS權重問題
+3.水平置中
+4.如果大量資料一次呈現頁面，要怎麼避免延遲情況(前後端方法都能寫)
+5.Promise是什麼，優點有甚麼?
+6.css選取器
+7.AJAX是什麼，怎麼用?</code></pre><h3 id="後端"><a href="#後端" class="headerlink" title="後端:"></a>後端:</h3><pre><code>1.用過甚麼後端框架，開發過什麼樣作品。
+2.解釋MVC
+3.Gitlab/CI
+4.Docker/k8s/忘了一個QQ，使用經驗與解決了甚麼問題</code></pre><h3 id="Mail-server"><a href="#Mail-server" class="headerlink" title="Mail server"></a>Mail server</h3><pre><code>1.pop3與IMAP的認識
+2.trace mail log
+3.有沒有自架mail server過，遇到什麼困難之類的</code></pre><h3 id="GIT"><a href="#GIT" class="headerlink" title="GIT"></a>GIT</h3><pre><code>1.git clone git fetch git pull差別與用法
+2.HEAD是什麼?
+3.怎麼復原被刪除的branch
+4.gitflow是什麼?</code></pre><h3 id="FreeBSD"><a href="#FreeBSD" class="headerlink" title="FreeBSD"></a>FreeBSD</h3><pre><code>1.給你一個設定檔問你問題
+2.各種BSD之間區別與特色ex:FreeBSD OpenBSD NetBSD</code></pre><h3 id="VM-amp-Linux"><a href="#VM-amp-Linux" class="headerlink" title="VM&amp;Linux"></a>VM&amp;Linux</h3><pre><code>1.用過哪些linux差別在哪，為什麼要用。
+2.管理過叢集式架構嗎?那有用甚麼軟體管控
+3.Virtual Box跟Docker差別與用在哪?
+4.live migration是什麼，介紹一下。
+5.舉例可以查到網路狀態的指令(最少一個)                </code></pre><h2 id="面試學長-WWW組"><a href="#面試學長-WWW組" class="headerlink" title="面試學長(WWW組)"></a>面試學長(WWW組)</h2><p>Google實習回來的學長，還有兩個在校學長，會看你的備審、考卷問你<code>會的</code>領域，像我比較擅長web方面就會一直深入去挖你的事情，<br>像是框架、經歷、有沒CI/CD、遇到什麼比較難的問題、Eslint、在公司專案事情等等，然後問你做過的系統網頁的架構之類的，也只有10分鐘所以也沒有特別深入，但我後面那個人不見就被問20分鐘，但我覺得蠻輕鬆的也都回答順利。</p>
+<h2 id="面試學長-系統管理"><a href="#面試學長-系統管理" class="headerlink" title="面試學長(系統管理)"></a>面試學長(系統管理)</h2><p>一堆大學長很刺激，大家都面色凝重，聽前面的考生講會很深入的去問你考卷與履歷有關系統問題，有人因為考卷不確定然後寫不好就被拿起來鞭，所以真心覺得不會寫不懂還是不要亂寫，但因為他們問我是開發為主還是系統管理維護方面，我回答是開發為重所以沒什麼問我系統管理的東西，然後因為WWW組都問過所以他們也沒問什麼，就變成粗淺的問一些像是工作經驗的問題，也因為這樣我反而覺得不太好，大家都被問非常多我反而很少。</p>
+<h2 id="教授面試-一片祥和"><a href="#教授面試-一片祥和" class="headerlink" title="教授面試(一片祥和)"></a>教授面試(一片祥和)</h2><p>因為學長們都面完了，所以教授也沒有刁難什麼，單純就是問經歷，然後就問你對系上有甚麼疑問，比前面學長的面試輕鬆非常多，放輕鬆回答就好了。 </p>
+<h1 id="戊組性向測驗"><a href="#戊組性向測驗" class="headerlink" title="戊組性向測驗"></a>戊組性向測驗</h1><p>只有大概15題左右，然後寫一個小時，記得帶手表沒時間看直接沒寫完QQ，因為有些問經歷寫很多文字要自己抓時間，考的大多是系統Web相關，還有一些額外的程式、演算法、觀念題。</p>
+<h2 id="題目-有些都是英文題QQ"><a href="#題目-有些都是英文題QQ" class="headerlink" title="題目(有些都是英文題QQ)"></a>題目(有些都是英文題QQ)</h2><pre><code>1.VM和Container差別。
+2.選擇題哪一個演算法跑過所有的節點。
+3.Python遞迴。
+4.算ip range。
+5.C語言寫某個常數做位移還是怎樣的，不能overflow的程式。
+6.說明什麼是OOP、functional programming、Comparative programming(不確定)、為何OOP比較差於Comparative programming解釋。
+7.說明強行別、弱型別、動態、靜態
+8.開啟一個檔案zero_one.in，裡面都是0 1比較哪個比較多0或1，用三種語言寫出來。
+9.什麼是雲端服務、舉三個廠商、之間的特色。
+10.microservice
+11.DevOps
+12.你開發用過什麼框架、為何用這個框架。
+13.XSS SQLinjection介紹與防範。
+14.SQL select訂單需排序。</code></pre><p>普遍不難但有些真的不太會或忘了還有英文看不懂QQ。    </p>
+<h2 id="下午面試-教授好可怕"><a href="#下午面試-教授好可怕" class="headerlink" title="下午面試(教授好可怕)"></a>下午面試(教授好可怕)</h2><p>戊組是站著面試，被一群教授包圍，然後就會開始問你考卷寫不好的地方，像我程式不會寫說我做嵌入式怎麼不用C寫QQ，然後節奏很快也會反駁你說的東西，有點類似會挑一些小毛病，蠻緊張的或許我能力真的不夠所以被鞭很慘，但問大家幾乎都被鞭過QQ，不過都是問考卷和備審東西去延伸。</p>
+<h1 id="成大乙組"><a href="#成大乙組" class="headerlink" title="成大乙組"></a>成大乙組</h1><p>下午面試前半小時去報到就好(記得帶准考證)，因為跟甲組、乙組、醫資所以很多人，乙組4個教授面一個人7分鐘，要準備1-4頁的簡報(評審沒看過你的備審)，然後自我介紹4分鐘3分鐘提問。</p>
+<h2 id="面試開始"><a href="#面試開始" class="headerlink" title="面試開始"></a>面試開始</h2><p>身家調查(?，幾乎沒有問到什麼技術問題，頂多問了我嵌入式部分可重組技術的小問題，然後問我公司在哪、為何還沒畢業、怎麼進工研院、有沒有貢獻opensource，做過最大的專案，沒了然後我一臉疑問出來，問大家好像也是這樣，從交大的嚴謹與技術問題到成大這樣有點不適應=ˇ=。</p>
+<h1 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h1><p>一開始因為沒什麼面試經驗，看很多網路文章感覺會問很多演算法、作業系統、計概等等，事情補了很多功課太爛，但這次面完大概是因為實作組原因，都是問相關技術性的問題，很少有學業的事情，所以真的是要做過才知道事情，除了成大有點出呼意料以外，真的不能唬爛或抱佛腳。如果之後放榜順利在更新吧，順利大概哭暈在廁所或回鄉下種田沒網路ㄌ。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/面試/" rel="tag"># 面試</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/25/Vue-x-powered-by/" rel="next" title="Vue-x-powered-by問題">
+                <i class="fa fa-chevron-left"></i> Vue-x-powered-by問題
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概覽
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Wei</p>
+              <p class="site-description motion-element" itemprop="description">code/work/life</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">文章</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分類</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">標籤</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/donggualemon" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.facebook.com/profile.php?id=100000557047040&ref=bookmarks" target="_blank" title="FB Page">
+                      
+                        <i class="fa fa-fw fa-facebook"></i>FB Page</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#丁組筆試性向測驗"><span class="nav-number">1.1.</span> <span class="nav-text">丁組筆試性向測驗</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前端"><span class="nav-number">1.1.1.</span> <span class="nav-text">前端:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#後端"><span class="nav-number">1.1.2.</span> <span class="nav-text">後端:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mail-server"><span class="nav-number">1.1.3.</span> <span class="nav-text">Mail server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GIT"><span class="nav-number">1.1.4.</span> <span class="nav-text">GIT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FreeBSD"><span class="nav-number">1.1.5.</span> <span class="nav-text">FreeBSD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VM-amp-Linux"><span class="nav-number">1.1.6.</span> <span class="nav-text">VM&amp;Linux</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面試學長-WWW組"><span class="nav-number">1.2.</span> <span class="nav-text">面試學長(WWW組)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面試學長-系統管理"><span class="nav-number">1.3.</span> <span class="nav-text">面試學長(系統管理)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#教授面試-一片祥和"><span class="nav-number">1.4.</span> <span class="nav-text">教授面試(一片祥和)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#戊組性向測驗"><span class="nav-number">2.</span> <span class="nav-text">戊組性向測驗</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#題目-有些都是英文題QQ"><span class="nav-number">2.1.</span> <span class="nav-text">題目(有些都是英文題QQ)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下午面試-教授好可怕"><span class="nav-number">2.2.</span> <span class="nav-text">下午面試(教授好可怕)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#成大乙組"><span class="nav-number">3.</span> <span class="nav-text">成大乙組</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#面試開始"><span class="nav-number">3.1.</span> <span class="nav-text">面試開始</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#結論"><span class="nav-number">4.</span> <span class="nav-text">結論</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wei</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 強力驅動</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主題 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
