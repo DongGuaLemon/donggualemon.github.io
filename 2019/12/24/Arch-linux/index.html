@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Programmer,CI,">
+  <meta name="keywords" content="Programmer,Linux,">
 
 
 
@@ -79,25 +79,18 @@
 
 
 
-<meta name="description" content="最近因為要引入CI/CD所以研究了一下CI/CD，各種工具百百種Travis CI  Circle CI…..因為專案用Gitlab做版控，所以研究好用又方便不用當輪子業者的線上Gitlab CI。為了減省人力成本和時間，會使用自動化測試與部屬，而Gitlab就有內建CI/CD的功能，只要commit跟push之後便會自行進入CI流程，把執行結果告訴使用者看有沒有成功或測試時發生錯誤，來達到自動測">
-<meta name="keywords" content="Programmer,CI">
+<meta name="description" content="這是Arch-linux安裝，一開始裝了好多次都失敗，發現BIOS跟UEFI的作法不同，然後好不容易裝成功了。就簡單先做過紀錄，以免我之後又把環境刷爆。之後再新增更多說明。">
+<meta name="keywords" content="Programmer,Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="線上使用Gitlab-CI">
-<meta property="og:url" content="https://donggualemon.github.io/2019/05/29/gitlab-ci/index.html">
+<meta property="og:title" content="Arch-linux(BIOS+MBR)">
+<meta property="og:url" content="https://donggualemon.github.io/2019/12/24/Arch-linux/index.html">
 <meta property="og:site_name" content="我的紀錄">
-<meta property="og:description" content="最近因為要引入CI/CD所以研究了一下CI/CD，各種工具百百種Travis CI  Circle CI…..因為專案用Gitlab做版控，所以研究好用又方便不用當輪子業者的線上Gitlab CI。為了減省人力成本和時間，會使用自動化測試與部屬，而Gitlab就有內建CI/CD的功能，只要commit跟push之後便會自行進入CI流程，把執行結果告訴使用者看有沒有成功或測試時發生錯誤，來達到自動測">
+<meta property="og:description" content="這是Arch-linux安裝，一開始裝了好多次都失敗，發現BIOS跟UEFI的作法不同，然後好不容易裝成功了。就簡單先做過紀錄，以免我之後又把環境刷爆。之後再新增更多說明。">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:image" content="https://donggualemon.github.io/img/gitlabci/gitlab.jpg">
-<meta property="og:image" content="https://donggualemon.github.io/img/gitlabci/ci.PNG">
-<meta property="og:image" content="https://donggualemon.github.io/img/gitlabci/yml.PNG">
-<meta property="og:image" content="https://donggualemon.github.io/img/gitlabci/11.PNG">
-<meta property="og:image" content="https://donggualemon.github.io/img/gitlabci/setting.PNG">
-<meta property="og:image" content="https://donggualemon.github.io/img/gitlabci/job.PNG">
-<meta property="og:updated_time" content="2019-09-25T07:30:39.429Z">
+<meta property="og:updated_time" content="2019-12-24T14:14:47.696Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="線上使用Gitlab-CI">
-<meta name="twitter:description" content="最近因為要引入CI/CD所以研究了一下CI/CD，各種工具百百種Travis CI  Circle CI…..因為專案用Gitlab做版控，所以研究好用又方便不用當輪子業者的線上Gitlab CI。為了減省人力成本和時間，會使用自動化測試與部屬，而Gitlab就有內建CI/CD的功能，只要commit跟push之後便會自行進入CI流程，把執行結果告訴使用者看有沒有成功或測試時發生錯誤，來達到自動測">
-<meta name="twitter:image" content="https://donggualemon.github.io/img/gitlabci/gitlab.jpg">
+<meta name="twitter:title" content="Arch-linux(BIOS+MBR)">
+<meta name="twitter:description" content="這是Arch-linux安裝，一開始裝了好多次都失敗，發現BIOS跟UEFI的作法不同，然後好不容易裝成功了。就簡單先做過紀錄，以免我之後又把環境刷爆。之後再新增更多說明。">
 
 
 
@@ -127,14 +120,14 @@
 
 
 
-  <link rel="canonical" href="https://donggualemon.github.io/2019/05/29/gitlab-ci/">
+  <link rel="canonical" href="https://donggualemon.github.io/2019/12/24/Arch-linux/">
 
 
 <meta name="google-site-verification" content="yMOSOBJdgXlSZd-wK5hSrhhv2vVKV9lzmlHhfxySuh4">
 
 
 
-  <title>線上使用Gitlab-CI | 我的紀錄</title>
+  <title>Arch-linux(BIOS+MBR) | 我的紀錄</title>
   
 
 
@@ -271,7 +264,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://donggualemon.github.io/2019/05/29/gitlab-ci/">
+    <link itemprop="mainEntityOfPage" href="https://donggualemon.github.io/2019/12/24/Arch-linux/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wei">
@@ -288,7 +281,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">線上使用Gitlab-CI</h1>
+          <h1 class="post-title" itemprop="name headline">Arch-linux(BIOS+MBR)</h1>
         
 
         <div class="post-meta">
@@ -300,8 +293,8 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2019-05-29T00:00:00+08:00">
-                2019-05-29
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2019-12-24T16:58:03+08:00">
+                2019-12-24
               </time>
             
 
@@ -334,8 +327,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Programmer/舊文章搬遷/" itemprop="url" rel="index">
-                    <span itemprop="name">舊文章搬遷</span>
+                  <a href="/categories/Programmer/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
                   </a>
                 </span>
 
@@ -371,11 +364,32 @@
       
 
       
-        <p><img src="/img/gitlabci/gitlab.jpg" alt><br>最近因為要引入CI/CD所以研究了一下CI/CD，各種工具百百種Travis CI  Circle CI…..<br>因為專案用Gitlab做版控，所以研究好用又方便不用當輪子業者的線上Gitlab CI。<br>為了減省人力成本和時間，會使用自動化測試與部屬，而Gitlab就有內建<code>CI/CD</code>的功能，只要<code>commit</code>跟<code>push</code>之後便會自行進入CI流程，把執行結果告訴使用者看有沒有成功或測試時發生錯誤，來達到自動測試的功能，這篇只是粗淺的說一下，畢竟自己也是新手做個筆記。</p>
+        <p>這是Arch-linux安裝，一開始裝了好多次都失敗，發現BIOS跟UEFI的作法不同，然後好不容易裝成功了。<br>就簡單先做過紀錄，以免我之後又把環境刷爆。之後再新增更多說明。</p>
 <a id="more"></a>
-<h1 id="簡單解說"><a href="#簡單解說" class="headerlink" title="簡單解說"></a>簡單解說</h1><p>我們在自己gitlab專案增加一個檔案，建議在練習的時候可以把流程建在branch，這樣比較清楚。<br><img src="/img/gitlabci/ci.PNG" alt><br>須建立一個<code>.gitlab-ci.yml</code>的設定檔。<br><img src="/img/gitlabci/yml.PNG" alt><br>這時候底下就是用來寫CI的流程了，是不是很方便。<br><img src="/img/gitlabci/11.PNG" alt><br>大概的形式長這個樣子，不過還是要看每個人的配置，上面只是粗淺的格式表達，可以去Gitlab官網查詢<a href="https://docs.gitlab.com/ee/ci/yaml/README.html" title="link" target="_blank" rel="noopener">按這裡</a>。</p>
-<p>寫完之後存起來我們就能到左邊的slid bar的CI/CD裡去看我們寫的配置。<br><img src="/img/gitlabci/setting.PNG" alt><br>可以看到狀態等等，而每次的<code>commit push</code>都會自動進入這個環節。<br>在job區可以看到運行流程與發生問題的地方，供使用者查詢與通知。<br><img src="/img/gitlabci/job.PNG" alt><br>這就是個粗淺的Gitlab CI介紹啦~~還是有更深入的區塊，像是結合docker AWS等等還是很多複雜的東西，所以各位加油啦!!小弟要更深入研究，假如有什麼新的發現在與大家分享。</p>
+<p>測試有沒有網路<br><code>dhcpcd</code><br><code>ping -c 3 www.google.com</code><br>看有無這路徑，有的話則是要UEFI模式，要不一樣的安裝方式<br><code>ls /sys/firmware/efi/efivars</code> </p>
+<p>查看硬碟狀況並切割</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">fdisk</span> <span class="bullet">-l</span></span><br><span class="line"><span class="string">cfdisk</span> <span class="string">/dev/sda</span> <span class="string">(選擇dos)</span></span><br><span class="line"><span class="string">/dev/sda1</span> <span class="number">4</span><span class="string">G</span> <span class="string">bootable</span></span><br><span class="line"><span class="string">/dev/sda2</span> <span class="number">4</span><span class="string">G</span> <span class="string">swap</span></span><br><span class="line"><span class="string">/dev/sda3</span> <span class="string">剩下</span> <span class="string">/mnt</span></span><br></pre></td></tr></table></figure>
 
+<p>格式化分割區</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">mkfs.ext4</span> <span class="string">/dev/sda1</span> <span class="string">/dev/sda3</span></span><br><span class="line"><span class="string">swap區</span></span><br><span class="line"><span class="string">mkswap</span> <span class="string">/dev/sda2</span></span><br><span class="line"><span class="string">swapon</span> <span class="string">/dev/sda2</span></span><br></pre></td></tr></table></figure>
+
+<p>磁碟分區掛載</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">mount</span> <span class="string">/dev/sda3</span> <span class="string">/mnt</span></span><br><span class="line"><span class="string">mkdir</span> <span class="string">/mnt/boot</span></span><br><span class="line"><span class="string">mount</span> <span class="string">/dev/sda1</span> <span class="string">/mnt/boot</span></span><br><span class="line"><span class="string">df(看有無掛載成功)</span></span><br></pre></td></tr></table></figure>
+
+<p>編輯mirrorlist，選擇比較近的下載點<br>將台灣的鏡像站的位置加到list的最前面，儲存後退出<br><code>vim /etc/pacman.d/mirrorlist</code><br>刷新系統<br><code>pacman -Sy</code></p>
+<p>下載Arch linux作業系統<br><code>pacstrap /mnt base base-devel linux linux-firmware</code></p>
+<p>建立fstab描述硬碟分割區與掛載方式，系統才會依照檔案內容掛載。<br><code>genfstab -p -U /mnt &gt;&gt; /mnt/etc/fstab</code><br>確認是否硬碟分割正確<br><code>cat /mnt/etc/fstab</code></p>
+<p>change root到你的新系統<br><code>arch-chroot /mnt</code></p>
+<p>設定電腦名字<br><code>echo &quot;NaN&quot; &gt;&gt; /etc/hostname</code></p>
+<p>設定開機密碼<br><code>passwd</code></p>
+<p>設定系統時間</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">ln</span> <span class="bullet">-sf</span> <span class="string">/usr/share/zoneinfo/Asia/Taipei</span> <span class="string">/etc/localtime</span></span><br><span class="line"><span class="string">hwclock--systohc</span> <span class="bullet">--utc</span></span><br><span class="line"><span class="string">date</span></span><br></pre></td></tr></table></figure>
+
+<p>設定系統語言<br>新系統沒有vim要先安裝 pacman -S vim<br><code>vim /etc/locale.gen</code><br>刪掉#<br>#en_US.UTF-8<br>#zh_TW.UTF-8<br>#zh_TW.BIG5<br>執行並默認系統語言為英文<br><code>lcale-gen</code><br><code>echo LANG=en_US.UTF-8 &gt; /etc/locale.conf</code></p>
+<p>建立映像檔<br><code>mkinitpcio -p linux</code></p>
+<p>安裝bootloader(BIOS)<br><code>pacman -S grub os-prober</code><br><code>grub-install /dev/sda(位置非分割區是磁碟名稱)</code><br>生成配置文件<br><code>grub-mkconfig -o /boot/grub/grub.cfg</code></p>
+<p>退出系統並且卸載然後重開</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">exit</span></span><br><span class="line"><span class="string">umount</span> <span class="bullet">-R</span> <span class="string">/mnt</span></span><br><span class="line"><span class="string">reboot</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -394,7 +408,7 @@
           
             <a href="/tags/Programmer/" rel="tag"># Programmer</a>
           
-            <a href="/tags/CI/" rel="tag"># CI</a>
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
           
         </div>
       
@@ -407,8 +421,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/14/Vue-eventbus/" rel="next" title="Vue-EventBus呼叫兄弟組件">
-                <i class="fa fa-chevron-left"></i> Vue-EventBus呼叫兄弟組件
+              <a href="/2019/11/28/solid-auth-client/" rel="next" title="Solid-auth-client讀寫問題">
+                <i class="fa fa-chevron-left"></i> Solid-auth-client讀寫問題
               </a>
             
           </div>
@@ -416,10 +430,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/15/Phaser/" rel="prev" title="第一次Phaser.js做2D遊戲">
-                第一次Phaser.js做2D遊戲 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -471,17 +481,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目錄
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            本站概覽
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -557,22 +558,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#簡單解說"><span class="nav-number">1.</span> <span class="nav-text">簡單解說</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
