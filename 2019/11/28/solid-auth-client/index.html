@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="我的紀錄">
 <meta property="og:description" content="最近在專案上碰Solid-auth-client，他是讓使用者能自己授權存取pod server，並且含有Auth功能，詳細Solid。有項功能是讀寫自己的pod，他是採用fetch的方式，也因為很少用fetch大多用axios，加上Solid-auth-client的架構問題所以採坑了一陣子。紀錄一下以免以後又遇到。">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2019-12-11T05:16:51.966Z">
+<meta property="og:updated_time" content="2020-02-04T12:22:52.488Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Solid-auth-client讀寫問題">
 <meta name="twitter:description" content="最近在專案上碰Solid-auth-client，他是讓使用者能自己授權存取pod server，並且含有Auth功能，詳細Solid。有項功能是讀寫自己的pod，他是採用fetch的方式，也因為很少用fetch大多用axios，加上Solid-auth-client的架構問題所以採坑了一陣子。紀錄一下以免以後又遇到。">
@@ -359,13 +359,13 @@
 <p><code>Solid-auth-client</code>裡有分<code>public</code>、<code>private</code>的地方可以寫入，但在<code>Auth</code>登入時需要給授權，是否能讀寫，否則大家都不能操作，public是能夠大家都能<code>Read</code>，而<code>Write</code>則是需要授權。<br>private的fetch write</p>
 <pre><code class="javascript">solid.auth
     .fetch(<span class="string">"https://urusername.solid.community/private/foldername"</span>, {
-        method: <span class="string">"PUT"</span>, <span class="comment">// or 'PUT'(建置) or 'DELETE'(刪除) or 'PATCH'(更新)</span>
+        method: <span class="string">"PUT"</span>, <span class="comment">// or 'PUT'(建置更新) or 'DELETE'(刪除)</span>
         headers: {
             <span class="string">"Content-Type"</span>: <span class="string">"application/json"</span>,<span class="comment">//application/json OR text/turtle</span>
             Link: <span class="string">'&lt;http://www.w3.org/ns/ldp#BasicContainer&gt;;rel="type"'</span>,
             <span class="comment">//Slug: "slug" //子資料夾</span>
             },
-        body:<span class="built_in">JSON</span>.stringify(vm.tableData)<span class="comment">//fetch json need to string or file can upload</span>
+        body:<span class="built_in">JSON</span>.stringify(Data)<span class="comment">//fetch json need to string or file can upload</span>
         })
         .then(<span class="function">(<span class="params">response</span>) =&gt;</span> {
             <span class="keyword">return</span> response.text();<span class="comment">//fetch response need to arrayBuffer() blob()formData()json()text()</span>
@@ -570,7 +570,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
