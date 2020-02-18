@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://donggualemon.github.io/2019/11/28/solid-auth-client/</loc>
-    <lastmod>2020-02-04</lastmod>
+    <lastmod>2020-02-18</lastmod>
   </url>  <url>
     <loc>https://donggualemon.github.io/2019/12/24/Arch-linux/</loc>
     <lastmod>2019-12-24</lastmod>
@@ -37,10 +37,10 @@
     <loc>https://donggualemon.github.io/2019/03/14/Vue-eventbus/</loc>
     <lastmod>2019-09-25</lastmod>
   </url>  <url>
-    <loc>https://donggualemon.github.io/2018/11/11/Vue-props/</loc>
+    <loc>https://donggualemon.github.io/2018/11/27/Vue-todolist2/</loc>
     <lastmod>2019-09-25</lastmod>
   </url>  <url>
-    <loc>https://donggualemon.github.io/2018/11/27/Vue-todolist2/</loc>
+    <loc>https://donggualemon.github.io/2018/11/11/Vue-props/</loc>
     <lastmod>2019-09-25</lastmod>
   </url>  <url>
     <loc>https://donggualemon.github.io/2019/08/15/Phaser/</loc>
