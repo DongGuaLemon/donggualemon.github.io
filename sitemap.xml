@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://donggualemon.github.io/2020/04/23/Laravel-pdo/</loc>
+    
+    <lastmod>2020-04-24T08:55:06.784Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://donggualemon.github.io/2020/03/14/nginx-ssl/</loc>
     
     <lastmod>2020-03-14T16:43:02.948Z</lastmod>
